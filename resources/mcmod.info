@@ -1,0 +1,17 @@
+[
+{
+"modid": "classicalalchemy",
+"name": "Classical Alchemy",
+"description": "Classical Alchemy, refined versions of Copper, Tin, and Bronze.",
+"version": "1.7.10-1.2.0",
+"credits": "Created by akkamaddi, reliant on AleXndrTheGr8st, updated by Sinhika",
+"logoFile": "",
+"mcversion": "1.7.10",
+"url": "",
+"updateUrl": "",
+"authorList": [ "akkamaddi", "Sinhika" ],
+"parent":"",
+"screenshots": [],
+"dependencies": ["simpleores","fusionplugin", "akkamaddicore" ]
+}
+]
