@@ -179,7 +179,6 @@ public class ClassicalAlchemyCore
     @EventHandler 
     public void preInit(FMLPreInitializationEvent event)
     {
-        // Stub Method
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
         // Stannum
