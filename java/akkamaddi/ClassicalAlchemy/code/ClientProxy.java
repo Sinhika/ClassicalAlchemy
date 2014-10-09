@@ -1,8 +1,7 @@
 package akkamaddi.ClassicalAlchemy.code;
 
-import akkamaddi.akkamaddiCore.api.CommonProxy;
 
-public class ClientProxy extends CommonProxy
+public class ClientProxy extends akkamaddi.akkamaddiCore.api.ClientProxy
 {
     @Override
     public void registerRenderers()

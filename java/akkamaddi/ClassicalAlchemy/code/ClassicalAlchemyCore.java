@@ -30,7 +30,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = "classicalalchemy", name = "Classical Alchemy", 
-	version = "1.7.10-1.1.0", 
+	version = "1.7.10-1.2.1", 
 	dependencies = "required-after:simpleores; required-after:fusionplugin ; required-after:akkamaddicore; after: arsenic")
 
 public class ClassicalAlchemyCore
@@ -129,7 +129,8 @@ public class ClassicalAlchemyCore
     public static boolean enableRecycling;
 
     // tab
-    public static SimpleTab tabAkkamaddiClassicalAlchemy = new SimpleTab("tabAkkamaddiClassicalAlchemy");
+    public static SimpleTab tabAkkamaddiClassicalAlchemy = 
+    		new SimpleTab("tabAkkamaddiClassicalAlchemy");
 
     // set tool properties
     // EnumToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
