@@ -1,5 +1,7 @@
 package akkamaddi.ClassicalAlchemy.code;
 
+import java.io.File;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -30,7 +32,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = "classicalalchemy", name = "Classical Alchemy", 
-	version = "1.7.10-1.2.1", 
+	version = "1.7.10-1.2.2", 
 	dependencies = "required-after:simpleores; required-after:fusionplugin ; required-after:akkamaddicore; after: arsenic")
 
 public class ClassicalAlchemyCore
@@ -180,7 +182,11 @@ public class ClassicalAlchemyCore
     @EventHandler 
     public void preInit(FMLPreInitializationEvent event)
     {
-        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+		File installDir = event.getModConfigurationDirectory();
+		File configDir = new File(installDir, "akkamaddi");
+	    File configFile = new File(configDir, "classicalalchemy.cfg");
+	    Configuration config = new Configuration(configFile);
+
         config.load();
         // Stannum
         enableRecycling = config.get(Configuration.CATEGORY_GENERAL, "Enable Classical Alchemy item recycling recipes: false or true?", false).getBoolean(false);
