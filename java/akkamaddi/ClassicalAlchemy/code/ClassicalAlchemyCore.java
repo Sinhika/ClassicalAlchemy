@@ -548,7 +548,12 @@ public class ClassicalAlchemyCore {
 		blockPyropusBronze.setHarvestLevel("pickaxe", 0);
 		blockPulchrumBronze.setHarvestLevel("pickaxe", 0);
 		blockTombBronze.setHarvestLevel("pickaxe", 0);
-
+		((SimpleBlock) blockStannum).setAsBeaconBase(true);
+		((SimpleBlock) blockCuprum).setAsBeaconBase(true);
+		((SimpleBlock) blockPyropusBronze).setAsBeaconBase(true);
+		((SimpleBlock) blockPulchrumBronze).setAsBeaconBase(true);
+		((SimpleBlock) blockTombBronze).setAsBeaconBase(true);
+		
 		toolStannum.customCraftingMaterial = ClassicalAlchemyCore.stannumIngot;
 		toolCuprum.customCraftingMaterial = ClassicalAlchemyCore.cuprumIngot;
 		toolPyropusBronze.customCraftingMaterial = ClassicalAlchemyCore.pyropusBronzeIngot;
