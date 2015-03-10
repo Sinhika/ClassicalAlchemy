@@ -1,7 +1,14 @@
 package akkamaddi.plugins.ClassicalAlchemy;
 
+import akkamaddi.api.core.LootHelper;
 import alexndr.api.content.blocks.SimpleBlock;
+import alexndr.api.content.items.SimpleArmor;
+import alexndr.api.content.items.SimpleAxe;
+import alexndr.api.content.items.SimpleHoe;
 import alexndr.api.content.items.SimpleItem;
+import alexndr.api.content.items.SimplePickaxe;
+import alexndr.api.content.items.SimpleShovel;
+import alexndr.api.content.items.SimpleSword;
 import alexndr.api.core.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -62,83 +69,75 @@ public class Content
 
 	public static void doArmor() 
 	{
-		stannumHelm = new SimpleArmor(armorStannum, rendererStannum, 0)
+		stannumHelm = new SimpleArmor(ClassicalAlchemy.armorStannum,  0)
 				.modId("classicalalchemy").setType("stannum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumHelm");
-		stannumChest = new SimpleArmor(armorStannum, rendererStannum, 1)
+		stannumChest = new SimpleArmor(ClassicalAlchemy.armorStannum,  1)
 				.modId("classicalalchemy").setType("stannum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumChest");
-		stannumLegs = new SimpleArmor(armorStannum, rendererStannum, 2)
+		stannumLegs = new SimpleArmor(ClassicalAlchemy.armorStannum,  2)
 				.modId("classicalalchemy").setType("stannum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumLegs");
-		stannumBoots = new SimpleArmor(armorStannum, rendererStannum, 3)
+		stannumBoots = new SimpleArmor(ClassicalAlchemy.armorStannum,  3)
 				.modId("classicalalchemy").setType("stannum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumBoots");
 		
-		cuprumHelm = new SimpleArmor(armorCuprum, rendererCuprum, 0)
+		cuprumHelm = new SimpleArmor(ClassicalAlchemy.armorCuprum,  0)
 				.modId("classicalalchemy").setType("cuprum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumHelm");
-		cuprumChest = new SimpleArmor(armorCuprum, rendererCuprum, 1)
+		cuprumChest = new SimpleArmor(ClassicalAlchemy.armorCuprum,  1)
 				.modId("classicalalchemy").setType("cuprum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumChest");
-		cuprumLegs = new SimpleArmor(armorCuprum, rendererCuprum, 2)
+		cuprumLegs = new SimpleArmor(ClassicalAlchemy.armorCuprum,  2)
 				.modId("classicalalchemy").setType("cuprum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumLegs");
-		cuprumBoots = new SimpleArmor(armorCuprum, rendererCuprum, 3)
+		cuprumBoots = new SimpleArmor(ClassicalAlchemy.armorCuprum,  3)
 				.modId("classicalalchemy").setType("cuprum")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumBoots");
 		
-		pyropusBronzeHelm = new SimpleArmor(armorPyropusBronze,
-				rendererPyropusBronze, 0)
-				.modId("classicalalchemy")
-				.setType("pyropusBronze")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		pyropusBronzeHelm = new SimpleArmor(
+				ClassicalAlchemy.armorPyropusBronze, 0)
+				.modId("classicalalchemy").setType("pyropusBronze")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeHelm");
-		pyropusBronzeChest = new SimpleArmor(armorPyropusBronze,
-				rendererPyropusBronze, 1)
-				.modId("classicalalchemy")
-				.setType("pyropusBronze")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		pyropusBronzeChest = new SimpleArmor(
+				ClassicalAlchemy.armorPyropusBronze, 1)
+				.modId("classicalalchemy").setType("pyropusBronze")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeChest");
-		pyropusBronzeLegs = new SimpleArmor(armorPyropusBronze,
-				rendererPyropusBronze, 2)
-				.modId("classicalalchemy")
-				.setType("pyropusBronze")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		pyropusBronzeLegs = new SimpleArmor(
+				ClassicalAlchemy.armorPyropusBronze, 2)
+				.modId("classicalalchemy").setType("pyropusBronze")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeLegs");
-		pyropusBronzeBoots = new SimpleArmor(armorPyropusBronze,
-				rendererPyropusBronze, 3)
-				.modId("classicalalchemy")
-				.setType("pyropusBronze")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		pyropusBronzeBoots = new SimpleArmor(
+				ClassicalAlchemy.armorPyropusBronze, 3)
+				.modId("classicalalchemy").setType("pyropusBronze")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeBoots");
-		
-		tombBronzeHelm = new SimpleArmor(armorTombBronze, rendererTombBronze, 0)
+
+		tombBronzeHelm = new SimpleArmor(ClassicalAlchemy.armorTombBronze, 0)
 				.modId("classicalalchemy").setType("tombBronze")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeHelm");
-		tombBronzeChest = new SimpleArmor(armorTombBronze, rendererTombBronze,
-				1).modId("classicalalchemy").setType("tombBronze")
+		tombBronzeChest = new SimpleArmor(ClassicalAlchemy.armorTombBronze, 1)
+				.modId("classicalalchemy").setType("tombBronze")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeChest");
-		tombBronzeLegs = new SimpleArmor(armorTombBronze, rendererTombBronze, 2)
+		tombBronzeLegs = new SimpleArmor(ClassicalAlchemy.armorTombBronze, 2)
 				.modId("classicalalchemy").setType("tombBronze")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeLegs");
-		tombBronzeBoots = new SimpleArmor(armorTombBronze, rendererTombBronze,
-				3).modId("classicalalchemy").setType("tombBronze")
+		tombBronzeBoots = new SimpleArmor(ClassicalAlchemy.armorTombBronze, 3)
+				.modId("classicalalchemy").setType("tombBronze")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeBoots");
 		
@@ -146,89 +145,89 @@ public class Content
 
 	public static void doTools() 
 	{
-		stannumSword = new SimpleSword(toolStannum).modId("classicalalchemy")
+		stannumSword = new SimpleSword(ClassicalAlchemy.toolStannum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumSword");
-		stannumShovel = new SimpleShovel(toolStannum).modId("classicalalchemy")
+		stannumShovel = new SimpleShovel(ClassicalAlchemy.toolStannum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumShovel");
-		stannumAxe = new SimpleAxe(toolStannum).modId("classicalalchemy")
+		stannumAxe = new SimpleAxe(ClassicalAlchemy.toolStannum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumAxe");
-		stannumPickaxe = new SimplePickaxe(toolStannum)
+		stannumPickaxe = new SimplePickaxe(ClassicalAlchemy.toolStannum)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumPickaxe");
-		stannumHoe = new SimpleHoe(toolStannum).modId("classicalalchemy")
+		stannumHoe = new SimpleHoe(ClassicalAlchemy.toolStannum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumHoe");
 
-		cuprumSword = new SimpleSword(toolCuprum).modId("classicalalchemy")
+		cuprumSword = new SimpleSword(ClassicalAlchemy.toolCuprum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumSword");
-		cuprumShovel = new SimpleShovel(toolCuprum).modId("classicalalchemy")
+		cuprumShovel = new SimpleShovel(ClassicalAlchemy.toolCuprum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumShovel");
-		cuprumAxe = new SimpleAxe(toolCuprum).modId("classicalalchemy")
+		cuprumAxe = new SimpleAxe(ClassicalAlchemy.toolCuprum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumAxe");
-		cuprumPickaxe = new SimplePickaxe(toolCuprum).modId("classicalalchemy")
+		cuprumPickaxe = new SimplePickaxe(ClassicalAlchemy.toolCuprum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumPickaxe");
-		cuprumHoe = new SimpleHoe(toolCuprum).modId("classicalalchemy")
+		cuprumHoe = new SimpleHoe(ClassicalAlchemy.toolCuprum).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumHoe");
 
-		pyropusBronzeSword = new SimpleSword(toolPyropusBronze)
+		pyropusBronzeSword = new SimpleSword(ClassicalAlchemy.toolPyropusBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeSword");
-		pyropusBronzeShovel = new SimpleShovel(toolPyropusBronze)
+		pyropusBronzeShovel = new SimpleShovel(ClassicalAlchemy.toolPyropusBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeShovel");
-		pyropusBronzeAxe = new SimpleAxe(toolPyropusBronze)
+		pyropusBronzeAxe = new SimpleAxe(ClassicalAlchemy.toolPyropusBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeAxe");
-		pyropusBronzePickaxe = new SimplePickaxe(toolPyropusBronze)
+		pyropusBronzePickaxe = new SimplePickaxe(ClassicalAlchemy.toolPyropusBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzePickaxe");
-		pyropusBronzeHoe = new SimpleHoe(toolPyropusBronze)
+		pyropusBronzeHoe = new SimpleHoe(ClassicalAlchemy.toolPyropusBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeHoe");
 
-		pulchrumBronzeSword = new SimpleSword(toolPulchrumBronze)
+		pulchrumBronzeSword = new SimpleSword(ClassicalAlchemy.toolPulchrumBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pulchrumBronzeSword");
-		pulchrumBronzeShovel = new SimpleShovel(toolPulchrumBronze)
+		pulchrumBronzeShovel = new SimpleShovel(ClassicalAlchemy.toolPulchrumBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pulchrumBronzeShovel");
-		pulchrumBronzeAxe = new SimpleAxe(toolPulchrumBronze)
+		pulchrumBronzeAxe = new SimpleAxe(ClassicalAlchemy.toolPulchrumBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pulchrumBronzeAxe");
-		pulchrumBronzePickaxe = new SimplePickaxe(toolPulchrumBronze)
+		pulchrumBronzePickaxe = new SimplePickaxe(ClassicalAlchemy.toolPulchrumBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pulchrumBronzePickaxe");
 
-		tombBronzeSword = new SimpleSword(toolTombBronze)
+		tombBronzeSword = new SimpleSword(ClassicalAlchemy.toolTombBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeSword");
-		tombBronzeShovel = new SimpleShovel(toolTombBronze)
+		tombBronzeShovel = new SimpleShovel(ClassicalAlchemy.toolTombBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeShovel");
-		tombBronzeAxe = new SimpleAxe(toolTombBronze).modId("classicalalchemy")
+		tombBronzeAxe = new SimpleAxe(ClassicalAlchemy.toolTombBronze).modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeAxe");
-		tombBronzePickaxe = new SimplePickaxe(toolTombBronze)
+		tombBronzePickaxe = new SimplePickaxe(ClassicalAlchemy.toolTombBronze)
 				.modId("classicalalchemy")
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzePickaxe");
@@ -238,51 +237,49 @@ public class Content
 	public static void doBlocks() 
 	{
 		// define blocks
-		blockStannum = new SimpleBlock(Material.iron)
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
-				.setHardness(4.0F).setResistance(8.0F)
+		blockStannum = new SimpleBlock(Material.iron).modId("classicalalchemy")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+				.setHardness(Settings.stannumHardness)
+				.setResistance(Settings.stannumResistance)
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockStannum");
-		blockCuprum = new SimpleBlock(Material.iron)
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
-				.setHardness(8.0F).setResistance(16.0F)
+		blockCuprum = new SimpleBlock(Material.iron).modId("classicalalchemy")
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+				.setHardness(Settings.cuprumHardness)
+				.setResistance(Settings.cuprumResistance)
 				.setStepSound(Block.soundTypeMetal).setBlockName("blockCuprum");
 		blockPyropusBronze = new SimpleBlock(Material.iron)
 				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
-				.setHardness(10.0F).setResistance(18.0F)
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+				.setHardness(Settings.pyropusBronzeHardness)
+				.setResistance(Settings.pyropusBronzeResistance)
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockPyropusBronze");
 		blockPulchrumBronze = new SimpleBlock(Material.iron)
 				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
-				.setHardness(8.0F).setResistance(20.0F)
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+				.setHardness(Settings.pulchrumBronzeHardness)
+				.setResistance(Settings.pulchrumBronzeResistance)
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockPulchrumBronze");
 		blockTombBronze = new SimpleBlock(Material.iron)
 				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
-				.setHardness(12.0F).setResistance(24.0F)
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+				.setHardness(Settings.tombBronzeHardness)
+				.setResistance(Settings.tombBronzeResistance)
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockTombBronze");
 
-		blockStannum.setHarvestLevel("pickaxe", 0);
-		blockCuprum.setHarvestLevel("pickaxe", 0);
-		blockPyropusBronze.setHarvestLevel("pickaxe", 0);
-		blockPulchrumBronze.setHarvestLevel("pickaxe", 0);
-		blockTombBronze.setHarvestLevel("pickaxe", 0);
-		((SimpleBlock) blockStannum).setAsBeaconBase(true);
-		((SimpleBlock) blockCuprum).setAsBeaconBase(true);
-		((SimpleBlock) blockPyropusBronze).setAsBeaconBase(true);
-		((SimpleBlock) blockPulchrumBronze).setAsBeaconBase(true);
-		((SimpleBlock) blockTombBronze).setAsBeaconBase(true);
+		blockStannum.setHarvestLevel("pickaxe", Settings.stannumHarvestLevel);
+		blockCuprum.setHarvestLevel("pickaxe", Settings.cuprumHarvestLevel);
+		blockPyropusBronze.setHarvestLevel("pickaxe", Settings.pyropusBronzeHarvestLevel);
+		blockPulchrumBronze.setHarvestLevel("pickaxe", Settings.pulchrumBronzeHarvestLevel);
+		blockTombBronze.setHarvestLevel("pickaxe", Settings.tombBronzeHarvestLevel);
+		((SimpleBlock) blockStannum).setBeaconBase(true);
+		((SimpleBlock) blockCuprum).setBeaconBase(true);
+		((SimpleBlock) blockPyropusBronze).setBeaconBase(true);
+		((SimpleBlock) blockPulchrumBronze).setBeaconBase(true);
+		((SimpleBlock) blockTombBronze).setBeaconBase(true);
 	} // end doBlocks()
 
 	/**
@@ -292,74 +289,78 @@ public class Content
 	{
 		// define items
 		// Stannum
-		stannumIngot = new SimpleItem()
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		stannumIngot = new SimpleItem().modId("classicalalchemy").isIngot()
+				.isIngot()
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("stannumIngot");
-		smallStannumChunkItem = new SimpleItem()
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		smallStannumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("smallStannumChunkItem");
-		mediumStannumChunkItem = new SimpleItem()
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		mediumStannumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("mediumStannumChunkItem");
-		largeStannumChunkItem = new SimpleItem()
-				.modId("classicalalchemy")
-				.setCreativeTab(
-						ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
+		largeStannumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
+				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("largeStannumChunkItem");
-		
-		cuprumIngot = new SimpleIngot().modId("classicalalchemy")
+
+		cuprumIngot = new SimpleItem().modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("cuprumIngot");
-		smallCuprumChunkItem = new SimpleIngot().modId("classicalalchemy")
+		smallCuprumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("smallCuprumChunkItem");
-		mediumCuprumChunkItem = new SimpleIngot().modId("classicalalchemy")
+		mediumCuprumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("mediumCuprumChunkItem");
-		largeCuprumChunkItem = new SimpleIngot().modId("classicalalchemy")
+		largeCuprumChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("largeCuprumChunkItem");
-		
-		pyropusBronzeIngot = new SimpleIngot().modId("classicalalchemy")
+
+		pyropusBronzeIngot = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pyropusBronzeIngot");
-		smallPyropusBronzeChunkItem = new SimpleIngot()
-				.modId("classicalalchemy")
+		smallPyropusBronzeChunkItem = new SimpleItem()
+				.modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("smallPyropusBronzeChunkItem");
-		mediumPyropusBronzeChunkItem = new SimpleIngot()
-				.modId("classicalalchemy")
+		mediumPyropusBronzeChunkItem = new SimpleItem()
+				.modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("mediumPyropusBronzeChunkItem");
-		largePyropusBronzeChunkItem = new SimpleIngot()
-				.modId("classicalalchemy")
+		largePyropusBronzeChunkItem = new SimpleItem()
+				.modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("largePyropusBronzeChunkItem");
-	
-		pulchrumBronzeIngot = new SimpleIngot().modId("classicalalchemy")
+
+		pulchrumBronzeIngot = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("pulchrumBronzeIngot");
-		largePulchrumBronzeChunkItem = new SimpleIngot()
-				.modId("classicalalchemy")
+		largePulchrumBronzeChunkItem = new SimpleItem()
+				.modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("largePulchrumBronzeChunkItem");
-		
-		tombBronzeIngot = new SimpleIngot().modId("classicalalchemy")
+
+		tombBronzeIngot = new SimpleItem().modId("classicalalchemy").isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("tombBronzeIngot");
-		smallTombBronzeChunkItem = new SimpleIngot().modId("classicalalchemy")
+		smallTombBronzeChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("smallTombBronzeChunkItem");
-		mediumTombBronzeChunkItem = new SimpleIngot().modId("classicalalchemy")
+		mediumTombBronzeChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("mediumTombBronzeChunkItem");
-		largeTombBronzeChunkItem = new SimpleIngot().modId("classicalalchemy")
+		largeTombBronzeChunkItem = new SimpleItem().modId("classicalalchemy")
+				.isIngot()
 				.setCreativeTab(ClassicalAlchemy.tabAkkamaddiClassicalAlchemy)
 				.setUnlocalizedName("largeTombBronzeChunkItem");
 

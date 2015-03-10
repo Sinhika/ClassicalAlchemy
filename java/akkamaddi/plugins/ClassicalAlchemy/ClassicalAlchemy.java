@@ -1,27 +1,19 @@
 package akkamaddi.plugins.ClassicalAlchemy;
 
-import java.io.File;
-
-import alexndr.api.content.inventory.SimpleTab;
-import alexndr.api.core.ContentTypes;
-import alexndr.api.core.LogHelper;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
+import alexndr.api.content.inventory.SimpleTab;
+import alexndr.api.core.ContentTypes;
+import alexndr.api.core.LogHelper;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+// used in 1.6.2
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION, 
 dependencies = "required-after:simplecore; required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore; after: arsenic")
@@ -56,8 +48,6 @@ public class ClassicalAlchemy
 		Content.setLoot();
 
 		MinecraftForge.EVENT_BUS.register(new HandlerArmor());
-
-
 	} // end preInit()
 
 	/**
@@ -88,25 +78,53 @@ public class ClassicalAlchemy
 		// set tool properties
 		// EnumToolMaterial. In form ("NAME", mining level, max uses, speed, damage
 		// to entity, enchantability)
-		  toolStannum = EnumHelper.addToolMaterial("STANNUM", 2, 380, 8.5F, 2, 10);
-		  toolCuprum = EnumHelper.addToolMaterial("CUPRUM", 2, 345, 9.0F, 2, 10);
-		  toolPyropusBronze = EnumHelper.addToolMaterial("PYROPUSBRONZE", 2, 840, 11.0F, 3, 18);
-		  toolPulchrumBronze = EnumHelper.addToolMaterial("PULCHRUMBRONZE", 3, 336, 12.0F, 3, 22);
-		  toolTombBronze = EnumHelper.addToolMaterial("TOMBBRONZE", 3, 920, 14.05F, 3, 28);
+		toolStannum = EnumHelper.addToolMaterial("STANNUM",
+				Settings.stannumMiningLevel, Settings.stannumUsesNum,
+				Settings.stannumMiningSpeed, Settings.stannumDamageVsEntity,
+				Settings.stannumEnchantability);
+		toolCuprum = EnumHelper.addToolMaterial("CUPRUM",
+				Settings.cuprumMiningLevel, Settings.cuprumUsesNum,
+				Settings.cuprumMiningSpeed, Settings.cuprumDamageVsEntity,
+				Settings.cuprumEnchantability);
+		toolPyropusBronze = EnumHelper.addToolMaterial("PYROPUSBRONZE",
+				Settings.pyropusBronzeMiningLevel,
+				Settings.pyropusBronzeUsesNum,
+				Settings.pyropusBronzeMiningSpeed,
+				Settings.pyropusBronzeDamageVsEntity,
+				Settings.pyropusBronzeEnchantability);
+		toolPulchrumBronze = EnumHelper.addToolMaterial("PULCHRUMBRONZE",
+				Settings.pulchrumBronzeMiningLevel,
+				Settings.pulchrumBronzeUsesNum,
+				Settings.pulchrumBronzeMiningSpeed,
+				Settings.pulchrumBronzeDamageVsEntity,
+				Settings.pulchrumBronzeEnchantability);
+		toolTombBronze = EnumHelper.addToolMaterial("TOMBBRONZE",
+				Settings.tombBronzeMiningLevel, Settings.tombBronzeUsesNum,
+				Settings.tombBronzeMiningSpeed,
+				Settings.tombBronzeDamageVsEntity,
+				Settings.tombBronzeEnchantability);
 
 		/**
 		 * EnumArmorMaterial. In form ("NAME", max damage (like uses, multiply by
 		 * pieces for their max damage), new int[] {helmet defense, chestplate
 		 * defense, leggings defense, boots defense}, enchantability)
 		 */
-		  armorStannum = EnumHelper.addArmorMaterial(
-				"STANNUM", 14, new int[] { 2, 4, 3, 2 }, 10);
-		  armorCuprum = EnumHelper.addArmorMaterial(
-				"CUPRUM", 13, new int[] { 2, 4, 3, 2 }, 9);
-		  armorPyropusBronze = EnumHelper
-				.addArmorMaterial("PYROPUSBRONZE", 20, new int[] { 4, 5, 4, 2 }, 18);
-		  armorTombBronze = EnumHelper.addArmorMaterial(
-				"TOMBBRONZE", 24, new int[] { 4, 6, 5, 4 }, 28);
+		armorStannum = EnumHelper.addArmorMaterial("STANNUM",
+				Settings.stannumArmorDurability,
+				Settings.stannumArmorDamageReduction,
+				Settings.stannumArmorEnchantability);
+		armorCuprum = EnumHelper.addArmorMaterial("CUPRUM",
+				Settings.cuprumArmorDurability,
+				Settings.cuprumArmorDamageReduction,
+				Settings.cuprumArmorEnchantability);
+		armorPyropusBronze = EnumHelper.addArmorMaterial("PYROPUSBRONZE",
+				Settings.pyropusBronzeArmorDurability,
+				Settings.pyropusBronzeArmorDamageReduction,
+				Settings.pyropusBronzeArmorEnchantability);
+		armorTombBronze = EnumHelper.addArmorMaterial("TOMBBRONZE",
+				Settings.tombBronzeArmorDurability,
+				Settings.tombBronzeArmorDamageReduction,
+				Settings.tombBronzeArmorEnchantability);
 	} // end setToolAndArmorStats()
 	
 	/**
@@ -115,11 +133,11 @@ public class ClassicalAlchemy
 	private static void setRepairMaterials()
 	{
 		
-		toolStannum.customCraftingMaterial = Content.stannumIngot;
-		toolCuprum.customCraftingMaterial = Content.cuprumIngot;
-		toolPyropusBronze.customCraftingMaterial = Content.pyropusBronzeIngot;
-		toolPulchrumBronze.customCraftingMaterial = Content.pulchrumBronzeIngot;
-		toolTombBronze.customCraftingMaterial = Content.tombBronzeIngot;
+		toolStannum.setRepairItem(new ItemStack(Content.stannumIngot));
+		toolCuprum.setRepairItem(new ItemStack(Content.cuprumIngot));
+		toolPyropusBronze.setRepairItem(new ItemStack(Content.pyropusBronzeIngot));
+		toolPulchrumBronze.setRepairItem(new ItemStack(Content.pulchrumBronzeIngot));
+		toolTombBronze.setRepairItem(new ItemStack(Content.tombBronzeIngot));
 		armorStannum.customCraftingMaterial = Content.stannumIngot;
 		armorCuprum.customCraftingMaterial = Content.cuprumIngot;
 		armorPyropusBronze.customCraftingMaterial = Content.pyropusBronzeIngot;
