@@ -20,7 +20,7 @@ public class SimpleArsenicContents extends ModContents
 
         try
         {
-            items = Class.forName("akkamaddi.plugins.arsenic.ArsenicAndLace");
+            items = Class.forName("akkamaddi.plugins.arsenic.Content");
         }
         catch (ClassNotFoundException e)
         {
