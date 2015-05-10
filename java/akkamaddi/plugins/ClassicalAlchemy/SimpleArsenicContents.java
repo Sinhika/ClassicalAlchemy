@@ -1,6 +1,6 @@
-package akkamaddi.ClassicalAlchemy.code;
+package akkamaddi.plugins.ClassicalAlchemy;
 
-import akkamaddi.akkamaddiCore.api.ModContents;
+import akkamaddi.api.core.ModContents;
 import net.minecraft.item.Item;
 
 public class SimpleArsenicContents extends ModContents
@@ -20,7 +20,7 @@ public class SimpleArsenicContents extends ModContents
 
         try
         {
-            items = Class.forName("akkamaddi.arsenic.code.ArsenicAndLace");
+            items = Class.forName("akkamaddi.plugins.arsenic.Content");
         }
         catch (ClassNotFoundException e)
         {
