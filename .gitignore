@@ -4,3 +4,11 @@ libs/
 *.log
 *.jar
 *.class
+gradle/
+gradlew
+gradlew.bat
+.classpath
+.project
+.gradle/
+.settings/
+run/
