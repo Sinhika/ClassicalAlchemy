@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "classicalalchemy:block/stannum_block"
+        }
+    }
+}

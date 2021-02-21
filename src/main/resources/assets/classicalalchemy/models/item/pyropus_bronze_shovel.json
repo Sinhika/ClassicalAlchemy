@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "classicalalchemy:item/pyropus_bronze_shovel"
+    }
+}

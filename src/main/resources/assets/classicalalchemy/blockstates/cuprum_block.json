@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "classicalalchemy:block/cuprum_block"
+        }
+    }
+}
