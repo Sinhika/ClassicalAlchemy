@@ -72,5 +72,6 @@
     "item.classicalalchemy.tomb_bronze_helmet": "Tomb Bronze Helmet",
     "item.classicalalchemy.tomb_bronze_chestplate": "Tomb Bronze Chestplate",
     "item.classicalalchemy.tomb_bronze_leggings": "Tomb Bronze Leggings",
-    "item.classicalalchemy.tomb_bronze_boots": "Tomb Bronze Boots"
+    "item.classicalalchemy.tomb_bronze_boots": "Tomb Bronze Boots",
+    "classicalalchemy.stannum_armor.info" : "§aSet Bonus: Negates Anvil Damage"
 }
