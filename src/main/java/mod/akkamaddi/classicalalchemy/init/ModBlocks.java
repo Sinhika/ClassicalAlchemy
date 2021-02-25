@@ -26,8 +26,24 @@ public final class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, ClassicalAlchemy.MODID);
 
     // storage blocks
+    public static final RegistryObject<Block> stannum_block = BLOCKS.register("stannum_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(4.0F, 8.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool())); 
+    public static final RegistryObject<Block> cuprum_block = BLOCKS.register("cuprum_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(8.0F, 16.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool())); 
     public static final RegistryObject<Block> pyropus_bronze_block = BLOCKS.register("pyropus_bronze_block",
             () -> new Block(Block.Properties.create(Material.IRON)
                     .hardnessAndResistance(10.0F, 18.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool())); 
+    public static final RegistryObject<Block> pulchrum_bronze_block = BLOCKS.register("pulchrum_bronze_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(8.0F, 20.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool())); 
+    public static final RegistryObject<Block> tomb_bronze_block = BLOCKS.register("tomb_bronze_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
+                    .hardnessAndResistance(12.0F, 24.0F).sound(SoundType.METAL)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool())); 
 } // end class

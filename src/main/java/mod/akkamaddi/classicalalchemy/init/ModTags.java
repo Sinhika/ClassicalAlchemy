@@ -9,6 +9,7 @@ public class ModTags
     public static class Items
     {
         public static final ITag.INamedTag<Item> INGOTS_COPPER = forgeTag("ingots/copper");
+        public static final ITag.INamedTag<Item> INGOTS_TIN = forgeTag("ingots/tin");
         
         private static ITag.INamedTag<Item> forgeTag(String name) {
             return ItemTags.makeWrapperTag("forge:" + name);
