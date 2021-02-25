@@ -1,7 +1,11 @@
 package mod.akkamaddi.classicalalchemy.init;
 
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
+import mod.akkamaddi.classicalalchemy.content.ClassicalArmorMaterial;
 import mod.akkamaddi.classicalalchemy.content.ClassicalItemTier;
+import mod.akkamaddi.classicalalchemy.content.StannumArmorItem;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -169,8 +173,59 @@ public final class ModItems
 
     // ARMORS
     // stannum
-    // cuprum
-    // pyropus_bronze
-    // tomb_bronze
+    public static final RegistryObject<StannumArmorItem> stannum_helmet = ITEMS.register("stannum_helmet",
+            () -> new StannumArmorItem(ClassicalArmorMaterial.STANNUM, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<StannumArmorItem> stannum_leggings = ITEMS.register("stannum_leggings",
+            () -> new StannumArmorItem(ClassicalArmorMaterial.STANNUM, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<StannumArmorItem> stannum_chestplate = ITEMS.register("stannum_chestplate",
+            () -> new StannumArmorItem(ClassicalArmorMaterial.STANNUM, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<StannumArmorItem> stannum_boots = ITEMS.register("stannum_boots",
+            () -> new StannumArmorItem(ClassicalArmorMaterial.STANNUM, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     
-} // end class
+    // cuprum
+    public static final RegistryObject<ArmorItem> cuprum_helmet = ITEMS.register("cuprum_helmet",
+            () -> new ArmorItem(ClassicalArmorMaterial.CUPRUM, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> cuprum_leggings = ITEMS.register("cuprum_leggings",
+            () -> new ArmorItem(ClassicalArmorMaterial.CUPRUM, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> cuprum_chestplate = ITEMS.register("cuprum_chestplate",
+            () -> new ArmorItem(ClassicalArmorMaterial.CUPRUM, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> cuprum_boots = ITEMS.register("cuprum_boots",
+            () -> new ArmorItem(ClassicalArmorMaterial.CUPRUM, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    
+    // pyropus_bronze
+    public static final RegistryObject<ArmorItem> pyropus_bronze_helmet = ITEMS.register("pyropus_bronze_helmet",
+            () -> new ArmorItem(ClassicalArmorMaterial.PYROPUS_BRONZE, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> pyropus_bronze_leggings = ITEMS.register("pyropus_bronze_leggings",
+            () -> new ArmorItem(ClassicalArmorMaterial.PYROPUS_BRONZE, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> pyropus_bronze_chestplate = ITEMS.register("pyropus_bronze_chestplate",
+            () -> new ArmorItem(ClassicalArmorMaterial.PYROPUS_BRONZE, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> pyropus_bronze_boots = ITEMS.register("pyropus_bronze_boots",
+            () -> new ArmorItem(ClassicalArmorMaterial.PYROPUS_BRONZE, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+
+    // tomb_bronze
+    public static final RegistryObject<ArmorItem> tomb_bronze_helmet = ITEMS.register("tomb_bronze_helmet",
+            () -> new ArmorItem(ClassicalArmorMaterial.TOMB_BRONZE, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> tomb_bronze_leggings = ITEMS.register("tomb_bronze_leggings",
+            () -> new ArmorItem(ClassicalArmorMaterial.TOMB_BRONZE, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> tomb_bronze_chestplate = ITEMS.register("tomb_bronze_chestplate",
+            () -> new ArmorItem(ClassicalArmorMaterial.TOMB_BRONZE, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<ArmorItem> tomb_bronze_boots = ITEMS.register("tomb_bronze_boots",
+            () -> new ArmorItem(ClassicalArmorMaterial.TOMB_BRONZE, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    
+    } // end class
