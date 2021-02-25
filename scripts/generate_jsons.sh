@@ -117,3 +117,16 @@ gen_model_jsons.py --type=armor --item_only tomb_bronze_chestplate
 gen_model_jsons.py --type=armor --item_only tomb_bronze_leggings
 gen_model_jsons.py --type=armor --item_only tomb_bronze_boots
 
+# loot tables.
+TARGETDIR=${TOPDIR}/src/main/resources/data/${ID}/loot_tables/blocks
+if [ ! -d $TARGETDIR ]; then
+    mkdir -p $TARGETDIR
+fi
+cd $TARGETDIR
+
+make_loot_drops.py stannum_block
+make_loot_drops.py cuprum_block
+make_loot_drops.py pyropus_bronze_block
+make_loot_drops.py pulchrum_bronze_block
+make_loot_drops.py tomb_bronze_block
+

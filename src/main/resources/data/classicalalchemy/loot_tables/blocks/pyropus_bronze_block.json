@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ],
+            "entries": [
+                {
+                    "name": "classicalalchemy:pyropus_bronze_block",
+                    "type": "minecraft:item"
+                }
+            ],
+            "name": "classicalalchemy:droppool",
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:block"
+}
