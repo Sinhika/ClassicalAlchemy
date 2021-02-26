@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/stannum",
+    "#forge:nuggets/cuprum",
+    "#forge:nuggets/pyropus_bronze",
+    "#forge:nuggets/pulchrum_bronze",
+    "#forge:nuggets/tomb_bronze"
+  ]
+}

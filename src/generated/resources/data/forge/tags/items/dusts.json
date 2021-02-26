@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:dusts/stannum",
+    "#forge:dusts/cuprum",
+    "#forge:dusts/pyropus_bronze",
+    "#forge:dusts/pulchrum_bronze",
+    "#forge:dusts/tomb_bronze"
+  ]
+}

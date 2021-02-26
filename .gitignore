@@ -13,3 +13,5 @@ gradlew.bat
 .gradle/
 .settings/
 run/
+src/generated/resources/.cache/
+
