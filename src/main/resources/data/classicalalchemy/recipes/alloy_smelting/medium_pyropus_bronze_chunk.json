@@ -1,0 +1,25 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:alloy_smelting",
+    "process_time": 300,
+    "ingredients": [
+        {
+            "item": "classicalalchemy:stannum_dust"
+        },
+        {
+            "item": "classicalalchemy:cuprum_dust"
+        },
+        {
+            "item": "minecraft:gunpowder"
+        }
+    ],
+    "result": {
+        "item": "classicalalchemy:medium_pyropus_bronze_chunk",
+        "count": 1
+    }
+}
