@@ -150,7 +150,7 @@ public final class ModItems
     public static final RegistryObject<ShovelItem> pyropus_bronze_shovel = ITEMS.register("pyropus_bronze_shovel",
             () -> new ShovelItem(ClassicalItemTier.PYROPUS_BRONZE, 1.5F, -3.0F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ShovelItem> tomb_bronze_shovel = ITEMS.register("tomb_bronze_1",
+    public static final RegistryObject<ShovelItem> tomb_bronze_shovel = ITEMS.register("tomb_bronze_shovel",
             () -> new ShovelItem(ClassicalItemTier.TOMB_BRONZE, 1.5F, -3.0F,
             new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     

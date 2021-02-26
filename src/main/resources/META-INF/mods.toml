@@ -35,7 +35,7 @@ description='''Addition of Cuprum, Stannum, Pyropus Bronze, Pulchrum Bronze, and
 [[dependencies.classicalalchemy]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.5-2.0.5.0, 1.16.5-2.0.6.0)"
+    versionRange="[1.16.5-2.0.5.1, 1.16.5-2.0.6.0)"
     ordering="NONE"
     side="BOTH"    
 
