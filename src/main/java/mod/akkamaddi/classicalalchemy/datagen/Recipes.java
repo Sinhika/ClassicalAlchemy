@@ -41,6 +41,14 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
     private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
     {
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.cuprum_ingot.get()), 
+                "cuprum", hasItem(ModItems.cuprum_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.stannum_ingot.get()), 
+                "stannum", hasItem(ModItems.stannum_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_ingot.get()), 
+                "pyropus_bronze", hasItem(ModItems.pyropus_bronze_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.tomb_bronze_ingot.get()), 
+                "tomb_bronze", hasItem(ModItems.tomb_bronze_ingot.get()), null);
     } // end registerArmorRecipes()
 
     private void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
