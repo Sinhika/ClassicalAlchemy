@@ -4,6 +4,7 @@ libs/
 *.log
 *.jar
 *.class
+*.launch
 gradle/
 gradlew
 gradlew.bat

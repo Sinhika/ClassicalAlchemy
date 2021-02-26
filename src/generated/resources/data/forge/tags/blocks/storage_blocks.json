@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/stannum",
+    "#forge:storage_blocks/cuprum",
+    "#forge:storage_blocks/pyropus_bronze",
+    "#forge:storage_blocks/pulchrum_bronze",
+    "#forge:storage_blocks/tomb_bronze"
+  ]
+}

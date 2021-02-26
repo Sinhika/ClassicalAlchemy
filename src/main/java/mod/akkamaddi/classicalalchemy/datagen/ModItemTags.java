@@ -15,4 +15,10 @@ public class ModItemTags extends ItemTagsProvider
         super(dataGenerator,  new ModBlockTags(dataGenerator, existingFileHelper), ClassicalAlchemy.MODID, existingFileHelper);
     }
 
+    @Override
+    protected void registerTags()
+    {
+    }
+
+    
 } // end class
