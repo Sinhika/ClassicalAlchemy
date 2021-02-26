@@ -82,15 +82,15 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
         // dust recipes (for Silents & other tech mods)
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.cuprum_dust.get()), 
-                ModItems.cuprum_ingot.get(), hasItem(ModItems.cuprum_dust.get()), 1.0F, 200);
+                ModItems.cuprum_ingot.get(), hasItem(ModItems.cuprum_dust.get()), 1.0F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.stannum_dust.get()), 
-                ModItems.stannum_ingot.get(), hasItem(ModItems.stannum_dust.get()), 1.0F, 200);
+                ModItems.stannum_ingot.get(), hasItem(ModItems.stannum_dust.get()), 1.0F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_dust.get()), 
-                ModItems.pyropus_bronze_ingot.get(), hasItem(ModItems.pyropus_bronze_dust.get()), 1.0F, 200);
+                ModItems.pyropus_bronze_ingot.get(), hasItem(ModItems.pyropus_bronze_dust.get()), 1.4F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.pulchrum_bronze_dust.get()), 
-                ModItems.pulchrum_bronze_ingot.get(), hasItem(ModItems.pulchrum_bronze_dust.get()), 1.0F, 200);
+                ModItems.pulchrum_bronze_ingot.get(), hasItem(ModItems.pulchrum_bronze_dust.get()), 2.0F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.tomb_bronze_dust.get()), 
-                ModItems.tomb_bronze_ingot.get(), hasItem(ModItems.tomb_bronze_dust.get()), 1.0F, 200);
+                ModItems.tomb_bronze_ingot.get(), hasItem(ModItems.tomb_bronze_dust.get()), 3.0F, 200, "_from_dust");
     } // end registerFurnaceRecipes()
 
     private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
