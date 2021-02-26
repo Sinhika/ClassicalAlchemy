@@ -10,6 +10,7 @@ public class ModTags
     {
         public static final ITag.INamedTag<Item> INGOTS_COPPER = forgeTag("ingots/copper");
         public static final ITag.INamedTag<Item> INGOTS_TIN = forgeTag("ingots/tin");
+        public static final ITag.INamedTag<Item> INGOTS_ARSENIDE_BRONZE = forgeTag("ingots/arsenide_bronze");
         
         private static ITag.INamedTag<Item> forgeTag(String name) {
             return ItemTags.makeWrapperTag("forge:" + name);
