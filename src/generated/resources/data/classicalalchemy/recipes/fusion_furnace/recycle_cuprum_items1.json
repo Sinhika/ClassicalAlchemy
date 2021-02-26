@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "classicalalchemy:cuprum_axe"
+            },
+            {
+              "item": "classicalalchemy:cuprum_boots"
+            },
+            {
+              "item": "classicalalchemy:cuprum_helmet"
+            },
+            {
+              "item": "classicalalchemy:cuprum_hoe"
+            },
+            {
+              "item": "classicalalchemy:cuprum_pickaxe"
+            },
+            {
+              "item": "classicalalchemy:cuprum_shovel"
+            },
+            {
+              "item": "classicalalchemy:cuprum_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "classicalalchemy:cuprum_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 7.0
+      }
+    }
+  ]
+}

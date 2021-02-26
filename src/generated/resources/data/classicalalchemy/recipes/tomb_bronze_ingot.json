@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:tomb_bronze_block"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:tomb_bronze_ingot",
+    "count": 9
+  }
+}

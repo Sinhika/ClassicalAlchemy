@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "classicalalchemy:pyropus_bronze_axe"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_boots"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_helmet"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_hoe"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_pickaxe"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_shovel"
+            },
+            {
+              "item": "classicalalchemy:pyropus_bronze_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "classicalalchemy:pyropus_bronze_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 10.0
+      }
+    }
+  ]
+}

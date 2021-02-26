@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "classicalalchemy:tomb_bronze_axe"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_boots"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_chestplate"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_helmet"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_leggings"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_pickaxe"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_shovel"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_sword"
+    }
+  ],
+  "result": "classicalalchemy:tomb_bronze_nugget",
+  "experience": 3.0,
+  "cookingtime": 200
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "classicalalchemy:pulchrum_bronze_ingot_from_blasting_from_dust"
+    ]
+  },
+  "criteria": {
+    "pulchrum_bronze_ingot_from_blasting_from_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "classicalalchemy:pulchrum_bronze_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "classicalalchemy:pulchrum_bronze_ingot_from_blasting_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pulchrum_bronze_ingot_from_blasting_from_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

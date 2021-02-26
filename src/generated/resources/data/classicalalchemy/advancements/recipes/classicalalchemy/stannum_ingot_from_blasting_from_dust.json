@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "classicalalchemy:stannum_ingot_from_blasting_from_dust"
+    ]
+  },
+  "criteria": {
+    "stannum_ingot_from_blasting_from_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "classicalalchemy:stannum_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "classicalalchemy:stannum_ingot_from_blasting_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stannum_ingot_from_blasting_from_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

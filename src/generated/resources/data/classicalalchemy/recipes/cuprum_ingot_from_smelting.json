@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "classicalalchemy:large_cuprum_chunk"
+  },
+  "result": "classicalalchemy:cuprum_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

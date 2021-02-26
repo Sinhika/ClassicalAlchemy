@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:stannum_nugget"
+    },
+    {
+      "item": "classicalalchemy:stannum_nugget"
+    },
+    {
+      "item": "classicalalchemy:stannum_nugget"
+    },
+    {
+      "item": "classicalalchemy:stannum_nugget"
+    },
+    {
+      "item": "classicalalchemy:stannum_nugget"
+    },
+    {
+      "item": "classicalalchemy:medium_stannum_chunk"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:large_stannum_chunk"
+  }
+}

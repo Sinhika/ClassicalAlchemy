@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "classicalalchemy:stannum_axe"
+            },
+            {
+              "item": "classicalalchemy:stannum_boots"
+            },
+            {
+              "item": "classicalalchemy:stannum_helmet"
+            },
+            {
+              "item": "classicalalchemy:stannum_hoe"
+            },
+            {
+              "item": "classicalalchemy:stannum_pickaxe"
+            },
+            {
+              "item": "classicalalchemy:stannum_shovel"
+            },
+            {
+              "item": "classicalalchemy:stannum_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "classicalalchemy:stannum_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 7.0
+      }
+    }
+  ]
+}

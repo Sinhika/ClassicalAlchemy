@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "classicalalchemy:tomb_bronze_dust"
+  },
+  "result": "classicalalchemy:tomb_bronze_ingot",
+  "experience": 3.0,
+  "cookingtime": 200
+}

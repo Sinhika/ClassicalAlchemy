@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "pyropus_bronze_making",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "classicalalchemy:cuprum_ingot"
+          },
+          {
+            "item": "classicalalchemy:stannum_ingot"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:gunpowder"
+        },
+        "output": {
+          "item": "classicalalchemy:medium_pyropus_bronze_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 6.0
+      }
+    }
+  ]
+}

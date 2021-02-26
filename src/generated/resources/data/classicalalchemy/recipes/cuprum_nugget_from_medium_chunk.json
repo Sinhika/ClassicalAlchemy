@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:medium_cuprum_chunk"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:cuprum_nugget",
+    "count": 4
+  }
+}

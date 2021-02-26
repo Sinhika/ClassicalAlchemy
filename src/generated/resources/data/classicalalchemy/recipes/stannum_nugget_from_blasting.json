@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "classicalalchemy:stannum_axe"
+    },
+    {
+      "item": "classicalalchemy:stannum_boots"
+    },
+    {
+      "item": "classicalalchemy:stannum_chestplate"
+    },
+    {
+      "item": "classicalalchemy:stannum_helmet"
+    },
+    {
+      "item": "classicalalchemy:stannum_hoe"
+    },
+    {
+      "item": "classicalalchemy:stannum_leggings"
+    },
+    {
+      "item": "classicalalchemy:stannum_pickaxe"
+    },
+    {
+      "item": "classicalalchemy:stannum_shovel"
+    },
+    {
+      "item": "classicalalchemy:stannum_sword"
+    }
+  ],
+  "result": "classicalalchemy:stannum_nugget",
+  "experience": 1.0,
+  "cookingtime": 100
+}

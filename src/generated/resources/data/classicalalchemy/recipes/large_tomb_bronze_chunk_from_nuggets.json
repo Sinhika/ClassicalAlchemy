@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:tomb_bronze_nugget"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_nugget"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_nugget"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_nugget"
+    },
+    {
+      "item": "classicalalchemy:tomb_bronze_nugget"
+    },
+    {
+      "item": "classicalalchemy:medium_tomb_bronze_chunk"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:large_tomb_bronze_chunk"
+  }
+}

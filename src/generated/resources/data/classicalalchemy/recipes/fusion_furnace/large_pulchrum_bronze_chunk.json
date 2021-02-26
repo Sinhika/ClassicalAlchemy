@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "pulchrum_bronze_making",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "classicalalchemy:pyropus_bronze_ingot"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:redstone"
+        },
+        "output": {
+          "item": "classicalalchemy:large_pulchrum_bronze_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 16.0
+      }
+    }
+  ]
+}

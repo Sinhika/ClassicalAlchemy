@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "S S",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "item": "classicalalchemy:cuprum_ingot"
+    }
+  },
+  "result": {
+    "item": "classicalalchemy:cuprum_helmet"
+  }
+}

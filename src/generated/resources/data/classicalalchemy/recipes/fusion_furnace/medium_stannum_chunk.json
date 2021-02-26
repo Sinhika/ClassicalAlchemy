@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "stannum_making",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/tin"
+          },
+          {
+            "tag": "forge:ingots/tin"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:bone_meal"
+        },
+        "output": {
+          "item": "classicalalchemy:medium_stannum_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 0.8
+      }
+    }
+  ]
+}

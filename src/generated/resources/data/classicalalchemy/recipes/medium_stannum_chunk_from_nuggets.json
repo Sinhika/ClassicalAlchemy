@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "classicalalchemy:stannum_nugget"
+    }
+  },
+  "result": {
+    "item": "classicalalchemy:medium_stannum_chunk"
+  }
+}

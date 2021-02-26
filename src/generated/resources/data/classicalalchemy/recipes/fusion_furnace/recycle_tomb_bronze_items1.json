@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "classicalalchemy:tomb_bronze_axe"
+            },
+            {
+              "item": "classicalalchemy:tomb_bronze_boots"
+            },
+            {
+              "item": "classicalalchemy:tomb_bronze_helmet"
+            },
+            {
+              "item": "classicalalchemy:tomb_bronze_pickaxe"
+            },
+            {
+              "item": "classicalalchemy:tomb_bronze_shovel"
+            },
+            {
+              "item": "classicalalchemy:tomb_bronze_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "output": {
+          "item": "classicalalchemy:tomb_bronze_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 15.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "classicalalchemy:stannum_dust"
+  },
+  "result": "classicalalchemy:stannum_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

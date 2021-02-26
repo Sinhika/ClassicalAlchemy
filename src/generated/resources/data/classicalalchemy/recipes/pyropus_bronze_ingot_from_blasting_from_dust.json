@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "classicalalchemy:pyropus_bronze_dust"
+  },
+  "result": "classicalalchemy:pyropus_bronze_ingot",
+  "experience": 1.4,
+  "cookingtime": 100
+}

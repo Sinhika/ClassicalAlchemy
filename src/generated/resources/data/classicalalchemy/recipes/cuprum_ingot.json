@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:cuprum_block"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:cuprum_ingot",
+    "count": 9
+  }
+}

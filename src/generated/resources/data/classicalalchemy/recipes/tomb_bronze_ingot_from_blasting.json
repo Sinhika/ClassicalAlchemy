@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "classicalalchemy:large_tomb_bronze_chunk"
+  },
+  "result": "classicalalchemy:tomb_bronze_ingot",
+  "experience": 3.0,
+  "cookingtime": 100
+}

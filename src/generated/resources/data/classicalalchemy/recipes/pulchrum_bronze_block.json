@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "classicalalchemy:pulchrum_bronze_ingot"
+    }
+  },
+  "result": {
+    "item": "classicalalchemy:pulchrum_bronze_block"
+  }
+}

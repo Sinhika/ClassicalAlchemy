@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "classicalalchemy:cuprum_axe"
+    },
+    {
+      "item": "classicalalchemy:cuprum_boots"
+    },
+    {
+      "item": "classicalalchemy:cuprum_chestplate"
+    },
+    {
+      "item": "classicalalchemy:cuprum_helmet"
+    },
+    {
+      "item": "classicalalchemy:cuprum_hoe"
+    },
+    {
+      "item": "classicalalchemy:cuprum_leggings"
+    },
+    {
+      "item": "classicalalchemy:cuprum_pickaxe"
+    },
+    {
+      "item": "classicalalchemy:cuprum_shovel"
+    },
+    {
+      "item": "classicalalchemy:cuprum_sword"
+    }
+  ],
+  "result": "classicalalchemy:cuprum_nugget",
+  "experience": 1.0,
+  "cookingtime": 100
+}

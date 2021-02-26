@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "classicalalchemy:pyropus_bronze_axe"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_boots"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_chestplate"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_helmet"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_hoe"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_leggings"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_pickaxe"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_shovel"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_sword"
+    }
+  ],
+  "result": "classicalalchemy:pyropus_bronze_nugget",
+  "experience": 1.4,
+  "cookingtime": 100
+}

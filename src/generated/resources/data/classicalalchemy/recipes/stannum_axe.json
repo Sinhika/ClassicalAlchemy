@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS ",
+    "ST ",
+    " T "
+  ],
+  "key": {
+    "S": {
+      "item": "classicalalchemy:stannum_ingot"
+    },
+    "T": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "classicalalchemy:stannum_axe"
+  }
+}

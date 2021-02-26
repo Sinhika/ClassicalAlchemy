@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "classicalalchemy:cuprum_ingot_from_smelting_from_dust"
+    ]
+  },
+  "criteria": {
+    "cuprum_ingot_from_smelting_from_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "classicalalchemy:cuprum_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "classicalalchemy:cuprum_ingot_from_smelting_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cuprum_ingot_from_smelting_from_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

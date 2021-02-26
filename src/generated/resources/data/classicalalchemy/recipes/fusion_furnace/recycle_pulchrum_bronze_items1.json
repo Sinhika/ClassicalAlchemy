@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_enabled",
+          "type": "classicalalchemy:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "classicalalchemy:pulchrum_bronze_axe"
+            },
+            {
+              "item": "classicalalchemy:pulchrum_bronze_pickaxe"
+            },
+            {
+              "item": "classicalalchemy:pulchrum_bronze_shovel"
+            },
+            {
+              "item": "classicalalchemy:pulchrum_bronze_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "classicalalchemy:pulchrum_bronze_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 10.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:medium_pyropus_bronze_chunk"
+    },
+    {
+      "item": "classicalalchemy:medium_pyropus_bronze_chunk"
+    },
+    {
+      "item": "classicalalchemy:pyropus_bronze_nugget"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:large_pyropus_bronze_chunk"
+  }
+}

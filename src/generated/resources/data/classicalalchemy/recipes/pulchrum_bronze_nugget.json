@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "classicalalchemy:pulchrum_bronze_ingot"
+    }
+  ],
+  "result": {
+    "item": "classicalalchemy:pulchrum_bronze_nugget",
+    "count": 9
+  }
+}

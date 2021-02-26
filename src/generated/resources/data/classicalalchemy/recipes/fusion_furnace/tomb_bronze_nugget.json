@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "values": [
+            {
+              "flag": "tomb_bronze_making",
+              "type": "classicalalchemy:flag"
+            },
+            {
+              "modid": "arsenic",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "forge:and"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "item": "classicalalchemy:pyropus_bronze_ingot"
+          },
+          {
+            "tag": "forge:ingots/arsenide_bronze"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:rotten_flesh"
+        },
+        "output": {
+          "item": "classicalalchemy:tomb_bronze_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 6.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "classicalalchemy:pulchrum_bronze_nugget_from_blasting"
+    ]
+  },
+  "criteria": {
+    "pulchrum_bronze_nugget_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "classicalalchemy:pulchrum_bronze_axe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "classicalalchemy:pulchrum_bronze_nugget_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pulchrum_bronze_nugget_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}
