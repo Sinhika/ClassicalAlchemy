@@ -3,7 +3,6 @@ package mod.akkamaddi.classicalalchemy.datagen;
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.init.ModItems;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
