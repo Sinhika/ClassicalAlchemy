@@ -8,13 +8,13 @@ import java.util.function.Supplier;
 import com.mojang.datafixers.util.Pair;
 
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
-import mod.alexndr.simplecorelib.datagen.AbstractLootTableProvider;
+import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.LootParameterSet;
 import net.minecraft.loot.LootTable.Builder;
 import net.minecraft.util.ResourceLocation;
 
-public class ClassicalLootTableProvider extends AbstractLootTableProvider
+public class ClassicalLootTableProvider extends BlockLootTableProvider
 {
 
     public ClassicalLootTableProvider(DataGenerator dataGeneratorIn)
