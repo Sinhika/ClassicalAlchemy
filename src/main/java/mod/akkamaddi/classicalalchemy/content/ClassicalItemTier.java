@@ -9,11 +9,11 @@ import net.minecraft.util.LazyValue;
 
 public enum ClassicalItemTier implements IItemTier 
 {
-    STANNUM(2, 380, 8.5f, 2.0f, 10, ()-> { return Ingredient.fromItems(ModItems.stannum_ingot.get());} ),
-    CUPRUM(2, 345, 9.0F, 2.0F, 10, ()-> { return Ingredient.fromItems(ModItems.cuprum_ingot.get());} ),
-    PYROPUS_BRONZE(2, 840, 11.0F, 3.0F, 18, ()-> { return Ingredient.fromItems(ModItems.pyropus_bronze_ingot.get());} ),
-    PULCHRUM_BRONZE(3, 336, 12.0F, 3.0F, 22, ()-> { return Ingredient.fromItems(ModItems.pulchrum_bronze_ingot.get());} ),
-    TOMB_BRONZE(3, 920, 14.05F, 3.0F, 28, ()-> { return Ingredient.fromItems(ModItems.tomb_bronze_ingot.get());});
+    STANNUM(2, 380, 8.5f, 2.0f, 10, ()-> { return Ingredient.of(ModItems.stannum_ingot.get());} ),
+    CUPRUM(2, 345, 9.0F, 2.0F, 10, ()-> { return Ingredient.of(ModItems.cuprum_ingot.get());} ),
+    PYROPUS_BRONZE(2, 840, 11.0F, 3.0F, 18, ()-> { return Ingredient.of(ModItems.pyropus_bronze_ingot.get());} ),
+    PULCHRUM_BRONZE(3, 336, 12.0F, 3.0F, 22, ()-> { return Ingredient.of(ModItems.pulchrum_bronze_ingot.get());} ),
+    TOMB_BRONZE(3, 920, 14.05F, 3.0F, 28, ()-> { return Ingredient.of(ModItems.tomb_bronze_ingot.get());});
 
     private final int harvestLevel;
     private final int maxUses;
@@ -34,32 +34,32 @@ public enum ClassicalItemTier implements IItemTier
     }
 
     @Override
-    public int getMaxUses() {
+    public int getUses() {
        return this.maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
        return this.efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
        return this.attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
        return this.harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
        return this.enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
-       return this.repairMaterial.getValue();
+    public Ingredient getRepairIngredient() {
+       return this.repairMaterial.get();
     }
 } // end enum

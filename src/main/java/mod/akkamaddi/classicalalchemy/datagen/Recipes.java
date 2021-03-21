@@ -26,7 +26,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     }
 
     @Override
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -38,85 +38,85 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
     {
         // large chunks
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.large_cuprum_chunk.get()),
-                ModItems.cuprum_ingot.get(), hasItem(ModItems.large_cuprum_chunk.get()), 
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_cuprum_chunk.get()),
+                ModItems.cuprum_ingot.get(), has(ModItems.large_cuprum_chunk.get()), 
                 1.0F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.large_stannum_chunk.get()),
-                ModItems.stannum_ingot.get(), hasItem(ModItems.large_stannum_chunk.get()), 
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_stannum_chunk.get()),
+                ModItems.stannum_ingot.get(), has(ModItems.large_stannum_chunk.get()), 
                 1.0F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.large_pyropus_bronze_chunk.get()),
-                ModItems.pyropus_bronze_ingot.get(), hasItem(ModItems.large_pyropus_bronze_chunk.get()), 
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_pyropus_bronze_chunk.get()),
+                ModItems.pyropus_bronze_ingot.get(), has(ModItems.large_pyropus_bronze_chunk.get()), 
                 1.4F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.large_pulchrum_bronze_chunk.get()),
-                ModItems.pulchrum_bronze_ingot.get(), hasItem(ModItems.large_pulchrum_bronze_chunk.get()), 
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_pulchrum_bronze_chunk.get()),
+                ModItems.pulchrum_bronze_ingot.get(), has(ModItems.large_pulchrum_bronze_chunk.get()), 
                 2.0F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.large_tomb_bronze_chunk.get()),
-                ModItems.tomb_bronze_ingot.get(), hasItem(ModItems.large_tomb_bronze_chunk.get()), 
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_tomb_bronze_chunk.get()),
+                ModItems.tomb_bronze_ingot.get(), has(ModItems.large_tomb_bronze_chunk.get()), 
                 3.0F, 200);
         
         // vanilla recycling.
-        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.fromItems(ModItems.stannum_axe.get(), 
+        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.of(ModItems.stannum_axe.get(), 
                 ModItems.stannum_boots.get(), ModItems.stannum_chestplate.get(), ModItems.stannum_helmet.get(),
                 ModItems.stannum_hoe.get(), ModItems.stannum_leggings.get(), ModItems.stannum_pickaxe.get(),
                 ModItems.stannum_shovel.get(), ModItems.stannum_sword.get()), 
-                ModItems.stannum_nugget.get(), hasItem(ModItems.stannum_axe.get()), 1.0F, 200);
-        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.fromItems(ModItems.cuprum_axe.get(), 
+                ModItems.stannum_nugget.get(), has(ModItems.stannum_axe.get()), 1.0F, 200);
+        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.of(ModItems.cuprum_axe.get(), 
                 ModItems.cuprum_boots.get(), ModItems.cuprum_chestplate.get(), ModItems.cuprum_helmet.get(),
                 ModItems.cuprum_hoe.get(), ModItems.cuprum_leggings.get(), ModItems.cuprum_pickaxe.get(),
                 ModItems.cuprum_shovel.get(), ModItems.cuprum_sword.get()), 
-                ModItems.cuprum_nugget.get(), hasItem(ModItems.cuprum_axe.get()), 1.0F, 200);
-        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_axe.get(), 
+                ModItems.cuprum_nugget.get(), has(ModItems.cuprum_axe.get()), 1.0F, 200);
+        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.of(ModItems.pyropus_bronze_axe.get(), 
                 ModItems.pyropus_bronze_boots.get(), ModItems.pyropus_bronze_chestplate.get(), ModItems.pyropus_bronze_helmet.get(),
                 ModItems.pyropus_bronze_hoe.get(), ModItems.pyropus_bronze_leggings.get(), ModItems.pyropus_bronze_pickaxe.get(),
                 ModItems.pyropus_bronze_shovel.get(), ModItems.pyropus_bronze_sword.get()), 
-                ModItems.pyropus_bronze_nugget.get(), hasItem(ModItems.pyropus_bronze_axe.get()), 1.4F, 200);
+                ModItems.pyropus_bronze_nugget.get(), has(ModItems.pyropus_bronze_axe.get()), 1.4F, 200);
         setbuilder.buildVanillaRecyclingRecipes(consumer,
-                Ingredient.fromItems(ModItems.pulchrum_bronze_axe.get(), ModItems.pulchrum_bronze_pickaxe.get(),
+                Ingredient.of(ModItems.pulchrum_bronze_axe.get(), ModItems.pulchrum_bronze_pickaxe.get(),
                         ModItems.pulchrum_bronze_shovel.get(), ModItems.pulchrum_bronze_sword.get()),
-                ModItems.pulchrum_bronze_nugget.get(), hasItem(ModItems.pulchrum_bronze_axe.get()), 2.0F, 200);
-        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.fromItems(ModItems.tomb_bronze_axe.get(), 
+                ModItems.pulchrum_bronze_nugget.get(), has(ModItems.pulchrum_bronze_axe.get()), 2.0F, 200);
+        setbuilder.buildVanillaRecyclingRecipes(consumer, Ingredient.of(ModItems.tomb_bronze_axe.get(), 
                 ModItems.tomb_bronze_boots.get(), ModItems.tomb_bronze_chestplate.get(), ModItems.tomb_bronze_helmet.get(),
                 ModItems.tomb_bronze_leggings.get(), ModItems.tomb_bronze_pickaxe.get(),
                 ModItems.tomb_bronze_shovel.get(), ModItems.tomb_bronze_sword.get()), 
-                ModItems.tomb_bronze_nugget.get(), hasItem(ModItems.tomb_bronze_axe.get()), 3.0F, 200);
+                ModItems.tomb_bronze_nugget.get(), has(ModItems.tomb_bronze_axe.get()), 3.0F, 200);
 
         // dust recipes (for Silents & other tech mods)
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.cuprum_dust.get()), 
-                ModItems.cuprum_ingot.get(), hasItem(ModItems.cuprum_dust.get()), 1.0F, 200, "_from_dust");
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.stannum_dust.get()), 
-                ModItems.stannum_ingot.get(), hasItem(ModItems.stannum_dust.get()), 1.0F, 200, "_from_dust");
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_dust.get()), 
-                ModItems.pyropus_bronze_ingot.get(), hasItem(ModItems.pyropus_bronze_dust.get()), 1.4F, 200, "_from_dust");
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.pulchrum_bronze_dust.get()), 
-                ModItems.pulchrum_bronze_ingot.get(), hasItem(ModItems.pulchrum_bronze_dust.get()), 2.0F, 200, "_from_dust");
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModItems.tomb_bronze_dust.get()), 
-                ModItems.tomb_bronze_ingot.get(), hasItem(ModItems.tomb_bronze_dust.get()), 3.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.cuprum_dust.get()), 
+                ModItems.cuprum_ingot.get(), has(ModItems.cuprum_dust.get()), 1.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.stannum_dust.get()), 
+                ModItems.stannum_ingot.get(), has(ModItems.stannum_dust.get()), 1.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.pyropus_bronze_dust.get()), 
+                ModItems.pyropus_bronze_ingot.get(), has(ModItems.pyropus_bronze_dust.get()), 1.4F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.pulchrum_bronze_dust.get()), 
+                ModItems.pulchrum_bronze_ingot.get(), has(ModItems.pulchrum_bronze_dust.get()), 2.0F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.tomb_bronze_dust.get()), 
+                ModItems.tomb_bronze_ingot.get(), has(ModItems.tomb_bronze_dust.get()), 3.0F, 200, "_from_dust");
     } // end registerFurnaceRecipes()
 
     private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.cuprum_ingot.get()), 
-                "cuprum", hasItem(ModItems.cuprum_ingot.get()), null);
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.stannum_ingot.get()), 
-                "stannum", hasItem(ModItems.stannum_ingot.get()), null);
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_ingot.get()), 
-                "pyropus_bronze", hasItem(ModItems.pyropus_bronze_ingot.get()), null);
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromItems(ModItems.tomb_bronze_ingot.get()), 
-                "tomb_bronze", hasItem(ModItems.tomb_bronze_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.cuprum_ingot.get()), 
+                "cuprum", has(ModItems.cuprum_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.stannum_ingot.get()), 
+                "stannum", has(ModItems.stannum_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.pyropus_bronze_ingot.get()), 
+                "pyropus_bronze", has(ModItems.pyropus_bronze_ingot.get()), null);
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.tomb_bronze_ingot.get()), 
+                "tomb_bronze", has(ModItems.tomb_bronze_ingot.get()), null);
     } // end registerArmorRecipes()
 
     private void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromItems(ModItems.cuprum_ingot.get()), "cuprum",
-                hasItem(ModItems.cuprum_ingot.get()), null, false);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromItems(ModItems.stannum_ingot.get()), "stannum",
-                hasItem(ModItems.stannum_ingot.get()), null, false);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromItems(ModItems.pulchrum_bronze_ingot.get()), "pulchrum_bronze",
-                hasItem(ModItems.pulchrum_bronze_ingot.get()), null, false);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromItems(ModItems.pyropus_bronze_ingot.get()), "pyropus_bronze",
-                hasItem(ModItems.pyropus_bronze_ingot.get()), null, false);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromItems(ModItems.tomb_bronze_ingot.get()), "tomb_bronze",
-                hasItem(ModItems.tomb_bronze_ingot.get()), null, false);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.cuprum_ingot.get()), "cuprum",
+                has(ModItems.cuprum_ingot.get()), null, false);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.stannum_ingot.get()), "stannum",
+                has(ModItems.stannum_ingot.get()), null, false);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.pulchrum_bronze_ingot.get()), "pulchrum_bronze",
+                has(ModItems.pulchrum_bronze_ingot.get()), null, false);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.pyropus_bronze_ingot.get()), "pyropus_bronze",
+                has(ModItems.pyropus_bronze_ingot.get()), null, false);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.tomb_bronze_ingot.get()), "tomb_bronze",
+                has(ModItems.tomb_bronze_ingot.get()), null, false);
     } // end registerToolRecipes()
 
     /** 
@@ -135,32 +135,32 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     {
         // vanilla storage recipes
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.cuprum_ingot.get(), ModBlocks.cuprum_block.get(),
-                ModItems.cuprum_nugget.get(), hasItem(ModItems.cuprum_ingot.get()));
+                ModItems.cuprum_nugget.get(), has(ModItems.cuprum_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.stannum_ingot.get(), ModBlocks.stannum_block.get(),
-                ModItems.stannum_nugget.get(), hasItem(ModItems.stannum_ingot.get()));
+                ModItems.stannum_nugget.get(), has(ModItems.stannum_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.pyropus_bronze_ingot.get(), ModBlocks.pyropus_bronze_block.get(),
-                ModItems.pyropus_bronze_nugget.get(), hasItem(ModItems.pyropus_bronze_ingot.get()));
+                ModItems.pyropus_bronze_nugget.get(), has(ModItems.pyropus_bronze_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.pulchrum_bronze_ingot.get(), ModBlocks.pulchrum_bronze_block.get(),
-                ModItems.pulchrum_bronze_nugget.get(), hasItem(ModItems.pulchrum_bronze_ingot.get()));
+                ModItems.pulchrum_bronze_nugget.get(), has(ModItems.pulchrum_bronze_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.tomb_bronze_ingot.get(), ModBlocks.tomb_bronze_block.get(),
-                ModItems.tomb_bronze_nugget.get(), hasItem(ModItems.tomb_bronze_ingot.get()));
+                ModItems.tomb_bronze_nugget.get(), has(ModItems.tomb_bronze_ingot.get()));
         
         // chunk conversion recipes
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.cuprum_nugget.get(),
                 ModItems.medium_cuprum_chunk.get(), ModItems.large_cuprum_chunk.get(), 
-                hasItem(ModItems.cuprum_nugget.get()));
+                has(ModItems.cuprum_nugget.get()));
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.stannum_nugget.get(),
                 ModItems.medium_stannum_chunk.get(), ModItems.large_stannum_chunk.get(), 
-                hasItem(ModItems.stannum_nugget.get()));
+                has(ModItems.stannum_nugget.get()));
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.pyropus_bronze_nugget.get(),
                 ModItems.medium_pyropus_bronze_chunk.get(), ModItems.large_pyropus_bronze_chunk.get(), 
-                hasItem(ModItems.pyropus_bronze_nugget.get()));
+                has(ModItems.pyropus_bronze_nugget.get()));
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.tomb_bronze_nugget.get(),
                 ModItems.medium_tomb_bronze_chunk.get(), ModItems.large_tomb_bronze_chunk.get(), 
-                hasItem(ModItems.tomb_bronze_nugget.get()));
+                has(ModItems.tomb_bronze_nugget.get()));
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.pulchrum_bronze_nugget.get(),
                 null, ModItems.large_pulchrum_bronze_chunk.get(), 
-                hasItem(ModItems.pulchrum_bronze_nugget.get()));
+                has(ModItems.pulchrum_bronze_nugget.get()));
 
     } // end registerStorageRecipes()
 

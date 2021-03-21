@@ -17,7 +17,7 @@ public class ModBlockTags extends BlockTagsProvider
     }
     
     @Override
-    protected void registerTags()
+    protected void addTags()
     {
         registerStorageBlockTags();
         registerBeaconBlockTags();
@@ -28,22 +28,22 @@ public class ModBlockTags extends BlockTagsProvider
      */
     private void registerStorageBlockTags()
     {
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/stannum"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/cuprum"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/pyropus_bronze"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/pulchrum_bronze"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/tomb_bronze"));
         
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/stannum"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/stannum"))
             .add(ModBlocks.stannum_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/cuprum"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/cuprum"))
             .add(ModBlocks.cuprum_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/pyropus_bronze"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/pyropus_bronze"))
             .add(ModBlocks.pyropus_bronze_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/pulchrum_bronze"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/pulchrum_bronze"))
             .add(ModBlocks.pulchrum_bronze_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/tomb_bronze"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/tomb_bronze"))
             .add(ModBlocks.tomb_bronze_block.get());
     } // end registerStorageBlockTags
     
@@ -52,7 +52,7 @@ public class ModBlockTags extends BlockTagsProvider
      */
     private void registerBeaconBlockTags()
     {
-        this.getOrCreateBuilder(BlockTags.BEACON_BASE_BLOCKS)
+        this.tag(BlockTags.BEACON_BASE_BLOCKS)
             .add(ModBlocks.stannum_block.get())
             .add(ModBlocks.cuprum_block.get())
             .add(ModBlocks.pyropus_bronze_block.get())

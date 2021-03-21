@@ -9,7 +9,7 @@ license="LGPL 3"
 
 [[mods]]
 modId="classicalalchemy"
-version="${version}"
+version="${file.jarVersion}"
 displayName="akkamaddi's Classical Alchemy"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/ClassicalAlchemy/1.16/update.json"
 displayURL="http://minecraft.curseforge.com/projects/akkamaddis-classical-alchemy"
@@ -21,7 +21,7 @@ description='''Addition of Cuprum, Stannum, Pyropus Bronze, Pulchrum Bronze, and
 [[dependencies.classicalalchemy]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[36.1.0,)"
     ordering="NONE"
     side="BOTH"
 
@@ -35,28 +35,28 @@ description='''Addition of Cuprum, Stannum, Pyropus Bronze, Pulchrum Bronze, and
 [[dependencies.classicalalchemy]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.5-2.0.5.1, 1.16.5-2.0.6.0)"
+    versionRange="[1.16.5-2.0.7.0, 1.16.5-2.0.8.0)"
     ordering="NONE"
     side="BOTH"    
 
 [[dependencies.classicalalchemy]]
     modId="simpleores"
     mandatory=false
-    versionRange="[1.16.5-2.4.4.0, 1.16.5-2.4.5.0)"
+    versionRange="[1.16.5-2.4.6.0, 1.16.5-2.4.7.0)"
     ordering="BEFORE"
     side="BOTH"    
 
 [[dependencies.classicalalchemy]]
     modId="fusion"
     mandatory=true
-    versionRange="[1.16.5-2.7.2.5, 1.16.5-2.7.3.0)"
+    versionRange="[1.16.5-2.7.3.0, 1.16.5-2.7.4.0)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.classicalalchemy]]
         modId="arsenic"
         mandatory=false
-        versionRange="[1.16.5-2.0.0.2,1.16.5-2.0.1.0)"
+        versionRange="[1.16.5-2.0.2.0, 1.16.5-2.0.3.0)"
         ordering="BEFORE"
         side="BOTH"
     
@@ -70,7 +70,7 @@ description='''Addition of Cuprum, Stannum, Pyropus Bronze, Pulchrum Bronze, and
 [[dependencies.classicalalchemy]]
         modId="silentgear"
         mandatory=false
-        versionRange="[1.16.3-2.5.2,)"
+        versionRange="[1.16.3-2.6.5,)"
         ordering="BEFORE"
         side="BOTH"
         
