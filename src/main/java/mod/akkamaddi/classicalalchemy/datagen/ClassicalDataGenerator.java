@@ -31,6 +31,7 @@ public class ClassicalDataGenerator
             gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new ClassicalLootTableProvider(gen));
+            gen.addProvider(new ClassicalAlchemyLootInjectorProvider(gen));
         }
      } // end gatherData()
 
