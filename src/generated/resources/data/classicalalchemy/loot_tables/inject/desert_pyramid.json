@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_sword"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}

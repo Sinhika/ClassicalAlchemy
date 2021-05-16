@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "classicalalchemy:tomb_bronze_sword"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}
