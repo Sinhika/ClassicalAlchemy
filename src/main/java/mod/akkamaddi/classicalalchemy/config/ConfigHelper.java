@@ -10,6 +10,8 @@ public final class ConfigHelper
 
     public static void bakeServer(final ModConfig config) 
     {
+        ClassicalAlchemyConfig.addChestLoot = ConfigHolder.SERVER.serverAddChestLoot.get();
+        
         // recipe flags.
         ClassicalAlchemyConfig.INSTANCE.putFlag("recycling_enabled", 
                 ConfigHolder.SERVER.serverEnableRecycling.get());
