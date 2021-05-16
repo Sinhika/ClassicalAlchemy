@@ -170,6 +170,13 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.tomb_bronze_nugget.get(), ModItems.medium_tomb_bronze_chunk.get(), ModItems.large_tomb_bronze_chunk.get(),
                 6.0F, 600, and(flag("tomb_bronze_making"), modLoaded("arsenic")));
         
+        catalysts[0] = null; catalysts[1] = null;
+        catalysts[2] = Ingredient.of(ModTags.Items.REAGENT_OLD_LACE);
+      
+        fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, null, null, 
+                ModItems.large_tomb_bronze_chunk.get(), 6.0F, 600, and(flag("tomb_bronze_making"), 
+                modLoaded("arsenic")), "_with_old_lace");
+        
         // tomb_bronze fusion recycling recipes
         fusionbuilder.buildFusionRecyclingRecipes(consumer, Ingredient.of(ModItems.tomb_bronze_axe.get(), 
                 ModItems.tomb_bronze_boots.get(), ModItems.tomb_bronze_helmet.get(), ModItems.tomb_bronze_pickaxe.get(),
