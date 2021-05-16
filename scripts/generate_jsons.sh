@@ -84,17 +84,17 @@ gen_model_jsons.py --type=tool --item_only pyropus_bronze_axe
 gen_model_jsons.py --type=tool --item_only pyropus_bronze_pickaxe
 gen_model_jsons.py --type=tool --item_only pyropus_bronze_hoe
 
-gen_model_jsons.py --type=tool --item_only pulchum_bronze_sword
-gen_model_jsons.py --type=tool --item_only pulchum_bronze_shovel
-gen_model_jsons.py --type=tool --item_only pulchum_bronze_axe
-gen_model_jsons.py --type=tool --item_only pulchum_bronze_pickaxe
-gen_model_jsons.py --type=tool --item_only pulchum_bronze_hoe
+gen_model_jsons.py --type=tool --item_only pulchrum_bronze_sword
+gen_model_jsons.py --type=tool --item_only pulchrum_bronze_shovel
+gen_model_jsons.py --type=tool --item_only pulchrum_bronze_axe
+gen_model_jsons.py --type=tool --item_only pulchrum_bronze_pickaxe
+#gen_model_jsons.py --type=tool --item_only pulchrum_bronze_hoe
 
 gen_model_jsons.py --type=tool --item_only tomb_bronze_sword
 gen_model_jsons.py --type=tool --item_only tomb_bronze_shovel
 gen_model_jsons.py --type=tool --item_only tomb_bronze_axe
 gen_model_jsons.py --type=tool --item_only tomb_bronze_pickaxe
-gen_model_jsons.py --type=tool --item_only tomb_bronze_hoe
+#gen_model_jsons.py --type=tool --item_only tomb_bronze_hoe
 
 # armor sets
 gen_model_jsons.py --type=armor --item_only cuprum_helmet
