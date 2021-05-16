@@ -1,5 +1,5 @@
-Classical Alchemy
-=================
+akkamaddi's Classical Alchemy
+=============================
 
 Repository for the Classical Alchemy add-on for SimpleOres2, originally by akkamaddi, now maintained by Sinhika.
 
@@ -7,7 +7,11 @@ Currently porting from old 1.7.10 code to Minecraft/Forge 1.16.5.
 
 TO-DO
 -----
-* Everything
+* (OPTIONAL) if supporting Silent Gear, add model and data files for each material.
+* Datagen for loot table injection.
+* LootTableLoad event handler for loot table injection.
+* <s>400x400 logo for CurseForge.</s>
+
 
 License
 -------
