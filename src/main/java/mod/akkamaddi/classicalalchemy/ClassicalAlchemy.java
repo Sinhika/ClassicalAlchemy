@@ -21,7 +21,7 @@ public class ClassicalAlchemy
     
     public ClassicalAlchemy()
     {
-        LOGGER.debug("Hello from akkamaddi's Arsenic and Lace!");
+        LOGGER.debug("Hello from akkamaddi's Classical Alchemy!");
         final ModLoadingContext modLoadingContext = ModLoadingContext.get();
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         

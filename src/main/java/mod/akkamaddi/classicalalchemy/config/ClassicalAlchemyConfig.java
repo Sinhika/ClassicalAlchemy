@@ -9,11 +9,10 @@ public class ClassicalAlchemyConfig implements ISimpleConfig
 {
     // recipe flags
     private static Map<String, Boolean> flags = new HashMap<>();
+    
+    // other variables
     public static ClassicalAlchemyConfig INSTANCE = new ClassicalAlchemyConfig();
     public static boolean addChestLoot;
-
-    // other variables
-    
     
     @Override
     public void clear()

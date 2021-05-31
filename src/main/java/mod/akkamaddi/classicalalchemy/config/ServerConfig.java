@@ -19,7 +19,7 @@ public final class ServerConfig
     ServerConfig(final ForgeConfigSpec.Builder builder)
     {
         builder.push("General");
-        serverAddChestLoot = builder.comment("Allow Fusion loot to be added to chests?")
+        serverAddChestLoot = builder.comment("Allow Classical Alchemy loot to be added to chests?")
                 .translation(ClassicalAlchemy.MODID + ".config.addChestLoot")
                 .define("AddChestLoot", true);
         serverEnableRecycling = 
