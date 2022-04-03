@@ -11,11 +11,11 @@ import mod.akkamaddi.classicalalchemy.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
 import mod.alexndr.fusion.api.recipe.AbstractFusionRecipeProvider;
 import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import net.minecraft.block.Blocks;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -32,7 +32,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
 
     
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerCuprumRecipes(consumer);
         registerStannumRecipes(consumer);
@@ -44,7 +44,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     /**
      * Cuprum alloying and fusion recycling recipes.
      */
-    protected void registerCuprumRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerCuprumRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -72,7 +72,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     /**
      * Stannum alloying and fusion recycling recipes.
      */
-    protected void registerStannumRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerStannumRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -100,7 +100,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     /**
      * Pyropus Bronze alloying and fusion recycling recipes.
      */
-    protected void registerPyropusBronzeRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerPyropusBronzeRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -129,7 +129,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     /**
      * Pulchrum Bronze alloying and fusion recycling recipes.
      */
-    protected void registerPulchrumBronzeRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerPulchrumBronzeRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];
@@ -155,7 +155,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     /**
      * Tomb Bronze alloying and fusion recycling recipes.
      */
-    protected void registerTombBronzeRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerTombBronzeRecipes(Consumer<FinishedRecipe> consumer)
     {
         List<Ingredient> primary_inputs = new ArrayList<Ingredient>(2);
         Ingredient[] catalysts = new Ingredient[3];

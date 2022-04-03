@@ -3,11 +3,11 @@ package mod.akkamaddi.classicalalchemy.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.classicalalchemy.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
 
-public enum ClassicalItemTier implements IItemTier 
+public enum ClassicalItemTier implements Tier 
 {
     STANNUM(2, 380, 8.5f, 2.0f, 10, ()-> { return Ingredient.of(ModItems.stannum_ingot.get());} ),
     CUPRUM(2, 345, 9.0F, 2.0F, 10, ()-> { return Ingredient.of(ModItems.cuprum_ingot.get());} ),
@@ -20,7 +20,7 @@ public enum ClassicalItemTier implements IItemTier
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
     
     private ClassicalItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability,
             Supplier<Ingredient> repairMaterial)
@@ -30,7 +30,7 @@ public enum ClassicalItemTier implements IItemTier
         this.efficiency = efficiency;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairMaterial = new LazyValue<>(repairMaterial);
+        this.repairMaterial = new LazyLoadedValue<>(repairMaterial);
     }
 
     @Override

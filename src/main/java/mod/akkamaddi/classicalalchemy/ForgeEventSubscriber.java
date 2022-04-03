@@ -8,8 +8,8 @@ import mod.akkamaddi.classicalalchemy.content.ClassicalArmorMaterial;
 import mod.akkamaddi.classicalalchemy.loot.ClassicalAlchemyInjectionLookup;
 import mod.alexndr.simplecorelib.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.helpers.LootUtils;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.DamageSource;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -40,9 +40,9 @@ public final class ForgeEventSubscriber
     public static void onLivingAttackEvent(LivingAttackEvent event)
     {
         // first, is it a player?
-        if (event.getEntityLiving() instanceof PlayerEntity)
+        if (event.getEntityLiving() instanceof Player)
         {
-            PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+            Player player = (Player) event.getEntityLiving();
             LOGGER.debug("caught LivingAttackEvent");
 
             // anvil damage and are they wearing full stannum armor?
