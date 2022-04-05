@@ -138,7 +138,7 @@ dependencies {
     implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
     implementation fg.deobf("simpleores:SimpleOres2:${simpleores_version}")
     implementation fg.deobf("fusion:Fusion:${fusion_version}")
-    runtimeOnly fg.deobf("akkamaddis-arsenic-and-lace:ArsenicAndLace:${arsenic_version}")
+    implementation fg.deobf("akkamaddis-arsenic-and-lace:ArsenicAndLace:${arsenic_version}")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
