@@ -2,7 +2,7 @@ package mod.akkamaddi.classicalalchemy.init;
 
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.content.ClassicalArmorMaterial;
-import mod.akkamaddi.classicalalchemy.content.ClassicalItemTier;
+import mod.akkamaddi.classicalalchemy.content.ClassicalItemTiers;
 import mod.akkamaddi.classicalalchemy.content.StannumArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -94,81 +94,81 @@ public final class ModItems
     // TOOLS
     // axes
     public static final RegistryObject<AxeItem> stannum_axe = ITEMS.register("stannum_axe",
-            () -> new AxeItem(ClassicalItemTier.STANNUM, 7.0F, -3.1F,
+            () -> new AxeItem(ClassicalItemTiers.STANNUM, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> cuprum_axe = ITEMS.register("cuprum_axe",
-            () -> new AxeItem(ClassicalItemTier.CUPRUM, 7.0F, -3.1F,
+            () -> new AxeItem(ClassicalItemTiers.CUPRUM, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> pulchrum_bronze_axe = ITEMS.register("pulchrum_bronze_axe",
-            () -> new AxeItem(ClassicalItemTier.PULCHRUM_BRONZE, 7.0F, -3.1F,
+            () -> new AxeItem(ClassicalItemTiers.PULCHRUM_BRONZE, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> pyropus_bronze_axe = ITEMS.register("pyropus_bronze_axe",
-            () -> new AxeItem(ClassicalItemTier.PYROPUS_BRONZE, 7.0F, -3.1F,
+            () -> new AxeItem(ClassicalItemTiers.PYROPUS_BRONZE, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> tomb_bronze_axe = ITEMS.register("tomb_bronze_axe",
-            () -> new AxeItem(ClassicalItemTier.TOMB_BRONZE, 7.0F, -3.1F,
+            () -> new AxeItem(ClassicalItemTiers.TOMB_BRONZE, 7.0F, -3.1F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // hoes
     public static final RegistryObject<HoeItem> stannum_hoe = ITEMS.register("stannum_hoe",
-            () -> new HoeItem(ClassicalItemTier.STANNUM, -1, 2.0F,
+            () -> new HoeItem(ClassicalItemTiers.STANNUM, -1, 2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> cuprum_hoe = ITEMS.register("cuprum_hoe",
-            () -> new HoeItem(ClassicalItemTier.CUPRUM, -1, 2.0F,
+            () -> new HoeItem(ClassicalItemTiers.CUPRUM, -1, 2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> pyropus_bronze_hoe = ITEMS.register("pyropus_bronze_hoe",
-            () -> new HoeItem(ClassicalItemTier.PYROPUS_BRONZE, -1, 2.0F,
+            () -> new HoeItem(ClassicalItemTiers.PYROPUS_BRONZE, -1, 2.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // pickaxes
     public static final RegistryObject<PickaxeItem> stannum_pickaxe = ITEMS.register("stannum_pickaxe",
-            () -> new PickaxeItem(ClassicalItemTier.STANNUM, 1, -2.8F,
+            () -> new PickaxeItem(ClassicalItemTiers.STANNUM, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> cuprum_pickaxe = ITEMS.register("cuprum_pickaxe",
-            () -> new PickaxeItem(ClassicalItemTier.CUPRUM, 1, -2.8F,
+            () -> new PickaxeItem(ClassicalItemTiers.CUPRUM, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> pulchrum_bronze_pickaxe = ITEMS.register("pulchrum_bronze_pickaxe",
-            () -> new PickaxeItem(ClassicalItemTier.PULCHRUM_BRONZE, 1, -2.8F,
+            () -> new PickaxeItem(ClassicalItemTiers.PULCHRUM_BRONZE, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> pyropus_bronze_pickaxe = ITEMS.register("pyropus_bronze_pickaxe",
-            () -> new PickaxeItem(ClassicalItemTier.PYROPUS_BRONZE, 1, -2.8F,
+            () -> new PickaxeItem(ClassicalItemTiers.PYROPUS_BRONZE, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> tomb_bronze_pickaxe = ITEMS.register("tomb_bronze_pickaxe",
-            () -> new PickaxeItem(ClassicalItemTier.TOMB_BRONZE, 1, -2.8F,
+            () -> new PickaxeItem(ClassicalItemTiers.TOMB_BRONZE, 1, -2.8F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // shovels
     public static final RegistryObject<ShovelItem> stannum_shovel = ITEMS.register("stannum_shovel",
-            () -> new ShovelItem(ClassicalItemTier.STANNUM, 1.5F, -3.0F,
+            () -> new ShovelItem(ClassicalItemTiers.STANNUM, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> cuprum_shovel = ITEMS.register("cuprum_shovel",
-            () -> new ShovelItem(ClassicalItemTier.CUPRUM, 1.5F, -3.0F,
+            () -> new ShovelItem(ClassicalItemTiers.CUPRUM, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> pulchrum_bronze_shovel = ITEMS.register("pulchrum_bronze_shovel",
-            () -> new ShovelItem(ClassicalItemTier.PULCHRUM_BRONZE, 1.5F, -3.0F,
+            () -> new ShovelItem(ClassicalItemTiers.PULCHRUM_BRONZE, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> pyropus_bronze_shovel = ITEMS.register("pyropus_bronze_shovel",
-            () -> new ShovelItem(ClassicalItemTier.PYROPUS_BRONZE, 1.5F, -3.0F,
+            () -> new ShovelItem(ClassicalItemTiers.PYROPUS_BRONZE, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> tomb_bronze_shovel = ITEMS.register("tomb_bronze_shovel",
-            () -> new ShovelItem(ClassicalItemTier.TOMB_BRONZE, 1.5F, -3.0F,
+            () -> new ShovelItem(ClassicalItemTiers.TOMB_BRONZE, 1.5F, -3.0F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // swords
     public static final RegistryObject<SwordItem> stannum_sword = ITEMS.register("stannum_sword",
-            () -> new SwordItem(ClassicalItemTier.STANNUM, 3, -2.4F,
+            () -> new SwordItem(ClassicalItemTiers.STANNUM, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> cuprum_sword = ITEMS.register("cuprum_sword",
-            () -> new SwordItem(ClassicalItemTier.CUPRUM, 3, -2.4F,
+            () -> new SwordItem(ClassicalItemTiers.CUPRUM, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> pulchrum_bronze_sword = ITEMS.register("pulchrum_bronze_sword",
-            () -> new SwordItem(ClassicalItemTier.PULCHRUM_BRONZE, 3, -2.4F,
+            () -> new SwordItem(ClassicalItemTiers.PULCHRUM_BRONZE, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> pyropus_bronze_sword = ITEMS.register("pyropus_bronze_sword",
-            () -> new SwordItem(ClassicalItemTier.PYROPUS_BRONZE, 3, -2.4F,
+            () -> new SwordItem(ClassicalItemTiers.PYROPUS_BRONZE, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> tomb_bronze_sword = ITEMS.register("tomb_bronze_sword",
-            () -> new SwordItem(ClassicalItemTier.TOMB_BRONZE, 3, -2.4F,
+            () -> new SwordItem(ClassicalItemTiers.TOMB_BRONZE, 3, -2.4F,
             new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // ARMORS
