@@ -1,14 +1,18 @@
 package mod.akkamaddi.classicalalchemy.datagen;
 
+import java.util.List;
+
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
+import mod.alexndr.simplecorelib.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
-public class ModBlockTags extends BlockTagsProvider
+public class ModBlockTags extends MiningBlockTags
 {
 
     public ModBlockTags(DataGenerator generatorIn, ExistingFileHelper existingFileHelper)
@@ -19,10 +23,22 @@ public class ModBlockTags extends BlockTagsProvider
     @Override
     protected void addTags()
     {
+        super.addTags();
         registerStorageBlockTags();
         registerBeaconBlockTags();
     } // end registerTags()
     
+    
+    @Override
+    protected void registerMiningTags()
+    {
+        // all the registered blocks are mineable.
+        List<Block> mineables = ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).toList();
+
+        // (mineable, stone, iron, diamond, netherite)
+        this.registerMineableTags(mineables, List.of(), mineables, List.of(), List.of());
+    }
+
     /**
      * Create standard forge tags for storage blocks.
      */

@@ -1,8 +1,8 @@
 package mod.akkamaddi.classicalalchemy.init;
 
 import mod.alexndr.simplecorelib.helpers.TagUtils;
-import net.minecraft.world.item.Item;
 import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
 
 public class ModTags
 {

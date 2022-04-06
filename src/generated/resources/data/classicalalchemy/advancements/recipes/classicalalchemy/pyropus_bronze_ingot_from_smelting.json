@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "classicalalchemy:large_pyropus_bronze_chunk"
+            "items": [
+              "classicalalchemy:large_pyropus_bronze_chunk"
+            ]
           }
         ]
       }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "classicalalchemy:pulchrum_bronze_ingot"
+            "items": [
+              "classicalalchemy:pulchrum_bronze_ingot"
+            ]
           }
         ]
       }

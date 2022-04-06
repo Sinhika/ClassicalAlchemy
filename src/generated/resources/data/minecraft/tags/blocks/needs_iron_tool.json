@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "classicalalchemy:stannum_block",
+    "classicalalchemy:cuprum_block",
+    "classicalalchemy:pyropus_bronze_block",
+    "classicalalchemy:pulchrum_bronze_block",
+    "classicalalchemy:tomb_bronze_block"
+  ]
+}

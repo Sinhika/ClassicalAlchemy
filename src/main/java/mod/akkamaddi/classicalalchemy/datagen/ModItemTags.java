@@ -1,13 +1,14 @@
 package mod.akkamaddi.classicalalchemy.datagen;
 
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
+import mod.akkamaddi.classicalalchemy.init.ModBlocks;
 import mod.akkamaddi.classicalalchemy.init.ModItems;
+import mod.alexndr.simplecorelib.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModItemTags extends ItemTagsProvider
+public class ModItemTags extends MiningItemTags
 {
 
     public ModItemTags(DataGenerator dataGenerator, ExistingFileHelper existingFileHelper)
@@ -18,10 +19,37 @@ public class ModItemTags extends ItemTagsProvider
     @Override
     protected void addTags()
     {
+        super.addTags();
+        registerStorageTags();
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
     }
+
+    /**
+     * Create standard forge tags for storage blocks.
+     */
+    private void registerStorageTags()
+    {
+        this.tag(TagUtils.forgeTag("storage_blocks"))
+            .addTag(TagUtils.forgeTag("storage_blocks/stannum"))
+            .addTag(TagUtils.forgeTag("storage_blocks/cuprum"))
+            .addTag(TagUtils.forgeTag("storage_blocks/pyropus_bronze"))
+            .addTag(TagUtils.forgeTag("storage_blocks/pulchrum_bronze"))
+            .addTag(TagUtils.forgeTag("storage_blocks/tomb_bronze"));
+        
+        this.tag(TagUtils.forgeTag("storage_blocks/stannum"))
+            .add(ModBlocks.stannum_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/cuprum"))
+            .add(ModBlocks.cuprum_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/pyropus_bronze"))
+            .add(ModBlocks.pyropus_bronze_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/pulchrum_bronze"))
+            .add(ModBlocks.pulchrum_bronze_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/tomb_bronze"))
+            .add(ModBlocks.tomb_bronze_block.get().asItem());
+    } // end registerStorageTags
+    
 
     private void registerNuggetTags()
     {

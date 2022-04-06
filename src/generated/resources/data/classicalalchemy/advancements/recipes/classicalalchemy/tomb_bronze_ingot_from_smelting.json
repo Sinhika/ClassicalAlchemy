@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "classicalalchemy:large_tomb_bronze_chunk"
+            "items": [
+              "classicalalchemy:large_tomb_bronze_chunk"
+            ]
           }
         ]
       }

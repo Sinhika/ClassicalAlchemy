@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "classicalalchemy:cuprum_dust"
+            "items": [
+              "classicalalchemy:cuprum_dust"
+            ]
           }
         ]
       }
