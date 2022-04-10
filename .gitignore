@@ -3,6 +3,7 @@ build/
 libs/
 *.log
 *.jar
+!gradle/wrapper/*.jar
 *.class
 *.launch
 .classpath
