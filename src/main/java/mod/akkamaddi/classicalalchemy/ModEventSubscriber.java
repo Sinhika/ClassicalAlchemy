@@ -10,7 +10,7 @@ import mod.akkamaddi.classicalalchemy.config.ConfigHelper;
 import mod.akkamaddi.classicalalchemy.config.ConfigHolder;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
 import mod.akkamaddi.classicalalchemy.init.ModTabGroups;
-import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

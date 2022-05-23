@@ -6,7 +6,7 @@ import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.init.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -16,16 +16,16 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 public class ClassicalItemTiers 
 {
-    public static final Tag.Named<Block> STANNUM_TAG = 
-            BlockTags.createOptional(new ResourceLocation(ClassicalAlchemy.MODID, "needs_stannum_tool"));
-    public static final Tag.Named<Block> CUPRUM_TAG = 
-            BlockTags.createOptional(new ResourceLocation(ClassicalAlchemy.MODID, "needs_cuprum_tool"));
-    public static final Tag.Named<Block> PYROPUS_BRONZE_TAG = 
-            BlockTags.createOptional(new ResourceLocation(ClassicalAlchemy.MODID, "needs_pyropus_bronze_tool"));
-    public static final Tag.Named<Block> PULCHRUM_BRONZE_TAG = 
-            BlockTags.createOptional(new ResourceLocation(ClassicalAlchemy.MODID, "needs_pulchrum_bronze_tool"));
-    public static final Tag.Named<Block> TOMB_BRONZE_TAG = 
-            BlockTags.createOptional(new ResourceLocation(ClassicalAlchemy.MODID, "needs_tomb_bronze_tool"));
+    public static final TagKey<Block> STANNUM_TAG = 
+            BlockTags.create(new ResourceLocation(ClassicalAlchemy.MODID, "needs_stannum_tool"));
+    public static final TagKey<Block> CUPRUM_TAG = 
+            BlockTags.create(new ResourceLocation(ClassicalAlchemy.MODID, "needs_cuprum_tool"));
+    public static final TagKey<Block> PYROPUS_BRONZE_TAG = 
+            BlockTags.create(new ResourceLocation(ClassicalAlchemy.MODID, "needs_pyropus_bronze_tool"));
+    public static final TagKey<Block> PULCHRUM_BRONZE_TAG = 
+            BlockTags.create(new ResourceLocation(ClassicalAlchemy.MODID, "needs_pulchrum_bronze_tool"));
+    public static final TagKey<Block> TOMB_BRONZE_TAG = 
+            BlockTags.create(new ResourceLocation(ClassicalAlchemy.MODID, "needs_tomb_bronze_tool"));
 
     public static final Tier STANNUM = TierSortingRegistry.registerTier(
             new ForgeTier(Tiers.IRON.getLevel(), 80, 8.5f, 2.0f, 10, STANNUM_TAG, 
