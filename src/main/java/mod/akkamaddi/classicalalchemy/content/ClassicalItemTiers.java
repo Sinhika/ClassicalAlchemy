@@ -45,11 +45,11 @@ public class ClassicalItemTiers
     public static final Tier PULCHRUM_BRONZE = TierSortingRegistry.registerTier(
             new ForgeTier(Tiers.DIAMOND.getLevel(), 336, 12.0F, 3.0F, 22, PULCHRUM_BRONZE_TAG, 
                         ()->Ingredient.of( ModItems.pulchrum_bronze_ingot.get())),
-            new ResourceLocation(ClassicalAlchemy.MODID, "pulchrum_bronze"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+            new ResourceLocation(ClassicalAlchemy.MODID, "pulchrum_bronze"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
     
     public static final Tier TOMB_BRONZE = TierSortingRegistry.registerTier(
             new ForgeTier(Tiers.DIAMOND.getLevel(), 920, 14.05F, 3.0F, 28, TOMB_BRONZE_TAG, 
                         ()->Ingredient.of( ModItems.tomb_bronze_ingot.get())),
-            new ResourceLocation(ClassicalAlchemy.MODID, "tomb_bronze"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+            new ResourceLocation(ClassicalAlchemy.MODID, "tomb_bronze"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
     
 } // end enum
