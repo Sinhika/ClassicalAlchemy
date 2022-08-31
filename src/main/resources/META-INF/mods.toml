@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[41,)" #mandatory
+loaderVersion="[43,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/ClassicalAlchemy/issues"
 license="LGPL 3"
 
@@ -21,42 +21,42 @@ description='''Addition of Cuprum, Stannum, Pyropus Bronze, Pulchrum Bronze, and
 [[dependencies.classicalalchemy]]
     modId="forge"
     mandatory=true
-    versionRange="[41.1.0,42)"
+    versionRange="[43,44)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.classicalalchemy]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19, 1.19.2)"
+    versionRange="[1.19.2, 1.19.3)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.classicalalchemy]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.19-5.0.1.8, 1.19.2-5.1.0.1)"
+    versionRange="[1.19.2-5.1.0.1, 1.19.3)"
     ordering="NONE"
     side="BOTH"    
 
 [[dependencies.classicalalchemy]]
     modId="simpleores"
     mandatory=false
-    versionRange="[1.19-5.0.0.0, 1.19.2-5.1.0.0)"
+    versionRange="[1.19.2-5.1.0.0, 1.19.3)"
     ordering="BEFORE"
     side="BOTH"    
 
 [[dependencies.classicalalchemy]]
     modId="fusion"
     mandatory=true
-    versionRange="[1.19-5.0.0.0, 1.19.2-5.1.0.0)"
+    versionRange="[1.19.2-5.1.0.0, 1.19.3)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.classicalalchemy]]
         modId="arsenic"
         mandatory=false
-        versionRange="[1.19-5.0.0.0,1.19.2-5.1.0.0)"
+        versionRange="[1.19.2-5.1.0.0, 1.19.3)"
         ordering="BEFORE"
         side="BOTH"
     
