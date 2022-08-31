@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
   "ingredient": [
     {
       "item": "classicalalchemy:stannum_axe"
@@ -29,7 +31,5 @@
       "item": "classicalalchemy:stannum_sword"
     }
   ],
-  "result": "classicalalchemy:stannum_nugget",
-  "experience": 1.0,
-  "cookingtime": 100
+  "result": "classicalalchemy:stannum_nugget"
 }

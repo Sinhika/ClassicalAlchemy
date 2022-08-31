@@ -11,18 +11,18 @@ import mod.akkamaddi.classicalalchemy.config.ConfigHolder;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
 import mod.akkamaddi.classicalalchemy.init.ModTabGroups;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = ClassicalAlchemy.MODID,  bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -47,10 +47,11 @@ public class ModEventSubscriber
      * This method will always be called after the Block registry method.
      */
     @SubscribeEvent
-    public static void onRegisterItems(final RegistryEvent.Register<Item> event)
+    public static void onRegisterItems(final RegisterEvent event) 
     {
-        final IForgeRegistry<Item> registry = event.getRegistry();
-        // Automatically register BlockItems for all our Blocks
+        if (event.getRegistryKey() == Registry.ITEM_REGISTRY)
+        {
+         // Automatically register BlockItems for all our Blocks
         ModBlocks.BLOCKS.getEntries().stream()
                 .map(RegistryObject::get)
                 // You can do extra filtering here if you don't want some blocks to have an BlockItem automatically registered for them
@@ -61,13 +62,14 @@ public class ModEventSubscriber
                     final Item.Properties properties = new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP);
                     // Create the new BlockItem with the block and it's properties
                     final BlockItem blockItem = new BlockItem(block, properties);
-                    // Set the new BlockItem's registry name to the block's registry name
-                    blockItem.setRegistryName(block.getRegistryName());
                     // Register the BlockItem
-                    registry.register(blockItem);
+                    event.register(Registry.ITEM_REGISTRY,  helper -> {
+                        helper.register(ForgeRegistries.BLOCKS.getKey(block), blockItem);
+                    });
                 });
         LOGGER.debug("Registered BlockItems");
-    }  // end onRegisterItems()
+        }
+    }
 
     @SubscribeEvent
     public static void onModConfigEvent(final ModConfigEvent event)
@@ -86,11 +88,13 @@ public class ModEventSubscriber
     } // onModConfigEvent
 
     @SubscribeEvent
-    public static void onRegisterRecipeSerializers(
-            @Nonnull final RegistryEvent.Register<RecipeSerializer<?>> event)
+    public static void onRegisterRecipeSerializers(@Nonnull RegisterEvent event)
     {
-        CraftingHelper.register(new FlagCondition.Serializer(ClassicalAlchemyConfig.INSTANCE, 
+        if (event.getRegistryKey() == Registry.RECIPE_SERIALIZER_REGISTRY)
+        {
+            CraftingHelper.register(new FlagCondition.Serializer(ClassicalAlchemyConfig.INSTANCE, 
                 new ResourceLocation(ClassicalAlchemy.MODID, "flag")));
+        }
     } // end registerRecipeSerializers
     
 } // end class

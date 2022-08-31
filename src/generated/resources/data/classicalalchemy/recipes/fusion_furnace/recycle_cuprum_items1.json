@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_enabled",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "recycling_enabled"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 7.0,
         "inputs": [
           [
             {
@@ -38,14 +43,9 @@
             "item": "minecraft:gravel"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
           "item": "classicalalchemy:cuprum_ingot"
-        },
-        "cookingtime": 600,
-        "experience": 7.0
+        }
       }
     }
   ]

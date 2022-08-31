@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 3.0,
   "ingredient": [
     {
       "item": "classicalalchemy:tomb_bronze_axe"
@@ -26,7 +28,5 @@
       "item": "classicalalchemy:tomb_bronze_sword"
     }
   ],
-  "result": "classicalalchemy:tomb_bronze_nugget",
-  "experience": 3.0,
-  "cookingtime": 200
+  "result": "classicalalchemy:tomb_bronze_nugget"
 }

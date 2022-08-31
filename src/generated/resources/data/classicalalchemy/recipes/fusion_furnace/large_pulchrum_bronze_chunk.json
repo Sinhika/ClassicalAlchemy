@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "pulchrum_bronze_making",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "pulchrum_bronze_making"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:redstone"
+        },
+        "cookingtime": 600,
+        "experience": 16.0,
         "inputs": [
           {
             "item": "classicalalchemy:pyropus_bronze_ingot"
@@ -18,14 +23,9 @@
             "item": "minecraft:gold_ingot"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:redstone"
-        },
         "output": {
           "item": "classicalalchemy:large_pulchrum_bronze_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 16.0
+        }
       }
     }
   ]

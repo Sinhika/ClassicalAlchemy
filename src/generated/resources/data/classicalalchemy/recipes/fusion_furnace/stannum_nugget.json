@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "stannum_making",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "stannum_making"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 0.4,
         "inputs": [
           {
             "tag": "forge:ingots/tin"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/tin"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
           "item": "classicalalchemy:stannum_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 0.4
+        }
       }
     }
   ]

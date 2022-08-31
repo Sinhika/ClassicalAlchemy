@@ -4,21 +4,26 @@
     {
       "conditions": [
         {
+          "type": "forge:and",
           "values": [
             {
-              "flag": "tomb_bronze_making",
-              "type": "classicalalchemy:flag"
+              "type": "classicalalchemy:flag",
+              "flag": "tomb_bronze_making"
             },
             {
-              "modid": "arsenic",
-              "type": "forge:mod_loaded"
+              "type": "forge:mod_loaded",
+              "modid": "arsenic"
             }
-          ],
-          "type": "forge:and"
+          ]
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:redstone"
+        },
+        "cookingtime": 600,
+        "experience": 12.0,
         "inputs": [
           {
             "item": "classicalalchemy:pyropus_bronze_ingot"
@@ -27,14 +32,9 @@
             "tag": "forge:ingots/arsenide_bronze"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:redstone"
-        },
         "output": {
           "item": "classicalalchemy:medium_tomb_bronze_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 12.0
+        }
       }
     }
   ]

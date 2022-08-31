@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
   "ingredient": [
     {
       "item": "classicalalchemy:cuprum_axe"
@@ -29,7 +31,5 @@
       "item": "classicalalchemy:cuprum_sword"
     }
   ],
-  "result": "classicalalchemy:cuprum_nugget",
-  "experience": 1.0,
-  "cookingtime": 100
+  "result": "classicalalchemy:cuprum_nugget"
 }

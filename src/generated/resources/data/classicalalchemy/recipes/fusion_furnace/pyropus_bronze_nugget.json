@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "pyropus_bronze_making",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "pyropus_bronze_making"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:bone_meal"
+        },
+        "cookingtime": 600,
+        "experience": 3.0,
         "inputs": [
           {
             "item": "classicalalchemy:cuprum_ingot"
@@ -18,14 +23,9 @@
             "item": "classicalalchemy:stannum_ingot"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:bone_meal"
-        },
         "output": {
           "item": "classicalalchemy:pyropus_bronze_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 3.0
+        }
       }
     }
   ]

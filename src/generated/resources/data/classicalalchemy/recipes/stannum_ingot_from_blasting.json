@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
   "ingredient": {
     "item": "classicalalchemy:large_stannum_chunk"
   },
-  "result": "classicalalchemy:stannum_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
+  "result": "classicalalchemy:stannum_ingot"
 }

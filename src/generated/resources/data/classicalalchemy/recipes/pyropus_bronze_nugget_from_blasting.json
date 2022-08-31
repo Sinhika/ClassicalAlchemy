@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.4,
   "ingredient": [
     {
       "item": "classicalalchemy:pyropus_bronze_axe"
@@ -29,7 +31,5 @@
       "item": "classicalalchemy:pyropus_bronze_sword"
     }
   ],
-  "result": "classicalalchemy:pyropus_bronze_nugget",
-  "experience": 1.4,
-  "cookingtime": 100
+  "result": "classicalalchemy:pyropus_bronze_nugget"
 }

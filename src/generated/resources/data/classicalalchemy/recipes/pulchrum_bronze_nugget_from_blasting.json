@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 2.0,
   "ingredient": [
     {
       "item": "classicalalchemy:pulchrum_bronze_axe"
@@ -14,7 +16,5 @@
       "item": "classicalalchemy:pulchrum_bronze_sword"
     }
   ],
-  "result": "classicalalchemy:pulchrum_bronze_nugget",
-  "experience": 2.0,
-  "cookingtime": 100
+  "result": "classicalalchemy:pulchrum_bronze_nugget"
 }

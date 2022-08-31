@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "stannum_making",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "stannum_making"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:gunpowder"
+        },
+        "cookingtime": 600,
+        "experience": 1.6,
         "inputs": [
           {
             "tag": "forge:ingots/tin"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/tin"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:gunpowder"
-        },
         "output": {
           "item": "classicalalchemy:large_stannum_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 1.6
+        }
       }
     }
   ]

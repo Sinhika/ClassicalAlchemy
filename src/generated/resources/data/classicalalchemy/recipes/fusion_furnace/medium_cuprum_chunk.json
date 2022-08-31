@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "cuprum_making",
-          "type": "classicalalchemy:flag"
+          "type": "classicalalchemy:flag",
+          "flag": "cuprum_making"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:bone_meal"
+        },
+        "cookingtime": 600,
+        "experience": 2.0,
         "inputs": [
           {
             "tag": "forge:ingots/copper"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/copper"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:bone_meal"
-        },
         "output": {
           "item": "classicalalchemy:medium_cuprum_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 2.0
+        }
       }
     }
   ]
