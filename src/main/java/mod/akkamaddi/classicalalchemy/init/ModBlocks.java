@@ -3,7 +3,8 @@ package mod.akkamaddi.classicalalchemy.init;
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -26,23 +27,23 @@ public final class ModBlocks
 
     // storage blocks
     public static final RegistryObject<Block> stannum_block = BLOCKS.register("stannum_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
                     .strength(4.0F, 8.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));
                     // .harvestTool(ToolType.PICKAXE).harvestLevel(0) 
     public static final RegistryObject<Block> cuprum_block = BLOCKS.register("cuprum_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)
                     .strength(8.0F, 16.0F).sound(SoundType.METAL).requiresCorrectToolForDrops())); 
                     // .harvestTool(ToolType.PICKAXE).harvestLevel(0)
     public static final RegistryObject<Block> pyropus_bronze_block = BLOCKS.register("pyropus_bronze_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE)
                     .strength(10.0F, 18.0F).sound(SoundType.METAL).requiresCorrectToolForDrops())); 
                     // .harvestTool(ToolType.PICKAXE).harvestLevel(0)
     public static final RegistryObject<Block> pulchrum_bronze_block = BLOCKS.register("pulchrum_bronze_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE)
                     .strength(8.0F, 20.0F).sound(SoundType.METAL).requiresCorrectToolForDrops())); 
                     // .harvestTool(ToolType.PICKAXE).harvestLevel(0)
     public static final RegistryObject<Block> tomb_bronze_block = BLOCKS.register("tomb_bronze_block",
-            () -> new Block(Block.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.PODZOL)
                     .strength(12.0F, 24.0F).sound(SoundType.METAL).requiresCorrectToolForDrops())); 
                     // .harvestTool(ToolType.PICKAXE).harvestLevel(0)
 } // end class

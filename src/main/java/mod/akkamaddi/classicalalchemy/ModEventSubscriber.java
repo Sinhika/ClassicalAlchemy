@@ -9,9 +9,8 @@ import mod.akkamaddi.classicalalchemy.config.ClassicalAlchemyConfig;
 import mod.akkamaddi.classicalalchemy.config.ConfigHelper;
 import mod.akkamaddi.classicalalchemy.config.ConfigHolder;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
-import mod.akkamaddi.classicalalchemy.init.ModCreativeTabs;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -49,25 +48,23 @@ public class ModEventSubscriber
     @SubscribeEvent
     public static void onRegisterItems(final RegisterEvent event) 
     {
-        if (event.getRegistryKey() == Registry.ITEM_REGISTRY)
+        if (event.getRegistryKey() == Registries.ITEM)
         {
-         // Automatically register BlockItems for all our Blocks
-        ModBlocks.BLOCKS.getEntries().stream()
-                .map(RegistryObject::get)
-                // You can do extra filtering here if you don't want some blocks to have an BlockItem automatically registered for them
-                // .filter(block -> needsItemBlock(block))
-                // Register the BlockItem for the block
-                .forEach(block -> {
-                    // Make the properties, and make it so that the item will be on our ItemGroup (CreativeTab)
-                    final Item.Properties properties = new Item.Properties().tab(ModCreativeTabs.MOD_ITEM_GROUP);
-                    // Create the new BlockItem with the block and it's properties
-                    final BlockItem blockItem = new BlockItem(block, properties);
-                    // Register the BlockItem
-                    event.register(Registry.ITEM_REGISTRY,  helper -> {
-                        helper.register(ForgeRegistries.BLOCKS.getKey(block), blockItem);
-                    });
-                });
-        LOGGER.debug("Registered BlockItems");
+	         // Automatically register BlockItems for all our Blocks
+	        ModBlocks.BLOCKS.getEntries().stream()
+	                .map(RegistryObject::get)
+	                // You can do extra filtering here if you don't want some blocks to have an BlockItem automatically registered for them
+	                // .filter(block -> needsItemBlock(block))
+	                // Register the BlockItem for the block
+	                .forEach(block -> {
+	                    // Create the new BlockItem with the block and it's properties
+	                    final BlockItem blockItem = new BlockItem(block, new Item.Properties());
+	                    // Register the BlockItem
+	                    event.register(Registries.ITEM,  helper -> {
+	                        helper.register(ForgeRegistries.BLOCKS.getKey(block), blockItem);
+	                    });
+	                });
+	        LOGGER.debug("Registered BlockItems");
         }
     }
 
@@ -90,7 +87,7 @@ public class ModEventSubscriber
     @SubscribeEvent
     public static void onRegisterRecipeSerializers(@Nonnull RegisterEvent event)
     {
-        if (event.getRegistryKey() == Registry.RECIPE_SERIALIZER_REGISTRY)
+        if (event.getRegistryKey() == Registries.RECIPE_SERIALIZER)
         {
             CraftingHelper.register(new FlagCondition.Serializer(ClassicalAlchemyConfig.INSTANCE, 
                 new ResourceLocation(ClassicalAlchemy.MODID, "flag")));

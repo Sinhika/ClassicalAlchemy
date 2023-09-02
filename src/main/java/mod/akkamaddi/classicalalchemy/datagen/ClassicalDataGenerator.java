@@ -24,6 +24,8 @@ public class ClassicalDataGenerator
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator gen = event.getGenerator();
+        
+        // server-side
         gen.addProvider(event.includeServer(), new Recipes(gen));
         gen.addProvider(event.includeServer(), new FusionRecipes(gen));
         gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));

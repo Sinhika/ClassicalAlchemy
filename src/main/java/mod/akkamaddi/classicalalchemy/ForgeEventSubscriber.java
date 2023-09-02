@@ -8,7 +8,7 @@ import mod.akkamaddi.classicalalchemy.content.ClassicalArmorMaterial;
 import mod.akkamaddi.classicalalchemy.loot.ClassicalAlchemyInjectionLookup;
 import mod.alexndr.simplecorelib.api.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.api.helpers.LootUtils;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -46,7 +46,7 @@ public final class ForgeEventSubscriber
             LOGGER.debug("caught LivingAttackEvent");
 
             // anvil damage and are they wearing full stannum armor?
-            if ((event.getSource() == DamageSource.ANVIL) &&
+            if ((event.getSource().is(DamageTypes.FALLING_ANVIL)) &&
                     ArmorUtils.isPlayerWearingFullSet(player,
                                                ClassicalArmorMaterial.STANNUM))
             {
