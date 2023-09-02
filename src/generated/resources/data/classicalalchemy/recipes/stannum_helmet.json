@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "S": {
       "item": "classicalalchemy:stannum_ingot"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "classicalalchemy:stannum_helmet"
-  }
+  },
+  "show_notification": true
 }

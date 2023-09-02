@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "classicalalchemy:pyropus_bronze_ingot_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "pyropus_bronze_ingot_from_blasting": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "classicalalchemy:large_pyropus_bronze_chunk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "pyropus_bronze_ingot_from_blasting",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "classicalalchemy:pyropus_bronze_ingot_from_blasting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

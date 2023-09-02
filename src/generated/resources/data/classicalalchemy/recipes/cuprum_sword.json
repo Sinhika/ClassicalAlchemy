@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "S": {
       "item": "classicalalchemy:cuprum_ingot"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "classicalalchemy:cuprum_sword"
-  }
+  },
+  "show_notification": true
 }
