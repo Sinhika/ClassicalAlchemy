@@ -1,29 +1,36 @@
 package mod.akkamaddi.classicalalchemy.datagen;
 
+import java.util.concurrent.CompletableFuture;
+
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
 import mod.akkamaddi.classicalalchemy.init.ModItems;
 import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemTags extends MiningItemTags
 {
 
-    public ModItemTags(DataGenerator dataGenerator, ExistingFileHelper existingFileHelper)
+    public ModItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			CompletableFuture<TagLookup<Block>> blockTagProvider, ExistingFileHelper existingFileHelper)
     {
-        super(dataGenerator,  new ModBlockTags(dataGenerator, existingFileHelper), ClassicalAlchemy.MODID, existingFileHelper);
+        super(output, lookupProvider, blockTagProvider, ClassicalAlchemy.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags()
+    protected void addTags(HolderLookup.Provider lookupProvider)
     {
-        super.addTags();
+        super.addTags(lookupProvider);
         registerStorageTags();
         registerDustTags();
         registerNuggetTags();
         registerIngotTags();
+        registerToolTags(ModItems.ITEMS);
+        registerArmorTags(ModItems.ITEMS);
     }
 
     /**

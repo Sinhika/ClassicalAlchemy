@@ -1,12 +1,15 @@
 package mod.akkamaddi.classicalalchemy.datagen;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import mod.akkamaddi.classicalalchemy.ClassicalAlchemy;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
 import mod.alexndr.simplecorelib.api.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -15,15 +18,16 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModBlockTags extends MiningBlockTags
 {
 
-    public ModBlockTags(DataGenerator generatorIn, ExistingFileHelper existingFileHelper)
+    public ModBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn, ClassicalAlchemy.MODID, existingFileHelper);
+        super(output, lookupProvider, ClassicalAlchemy.MODID, existingFileHelper);
     }
     
     @Override
-    protected void addTags()
+    protected void addTags(Provider pProvider)
     {
-        super.addTags();
+        super.addTags(pProvider);
         registerStorageBlockTags();
         registerBeaconBlockTags();
     } // end registerTags()
@@ -75,5 +79,11 @@ public class ModBlockTags extends MiningBlockTags
             .add(ModBlocks.pulchrum_bronze_block.get())
             .add(ModBlocks.tomb_bronze_block.get());
     } // end registerBeaconBlockTags
+
+	@Override
+	protected void registerOreTags() {
+		// TODO Auto-generated method stub
+		
+	}
     
 } // end class
