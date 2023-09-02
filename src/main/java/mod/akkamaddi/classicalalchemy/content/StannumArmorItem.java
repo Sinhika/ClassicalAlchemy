@@ -13,10 +13,9 @@ import net.minecraft.world.level.Level;
 public class StannumArmorItem extends ArmorItem
 {
 
-    public StannumArmorItem(ArmorMaterial materialIn, EquipmentSlot slot, Properties builderIn)
+    public StannumArmorItem(ArmorMaterial materialIn, Type armortype, Properties builderIn)
     {
-        super(materialIn, slot, builderIn);
-        // TODO Auto-generated constructor stub
+        super(materialIn, armortype, builderIn);
     }
 
     @Override

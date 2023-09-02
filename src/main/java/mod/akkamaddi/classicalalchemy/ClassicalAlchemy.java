@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.classicalalchemy.config.ConfigHolder;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
+import mod.akkamaddi.classicalalchemy.init.ModCreativeTabs;
 import mod.akkamaddi.classicalalchemy.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -27,6 +28,7 @@ public class ClassicalAlchemy
         
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);

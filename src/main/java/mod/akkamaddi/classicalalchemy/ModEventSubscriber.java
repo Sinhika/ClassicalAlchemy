@@ -9,7 +9,7 @@ import mod.akkamaddi.classicalalchemy.config.ClassicalAlchemyConfig;
 import mod.akkamaddi.classicalalchemy.config.ConfigHelper;
 import mod.akkamaddi.classicalalchemy.config.ConfigHolder;
 import mod.akkamaddi.classicalalchemy.init.ModBlocks;
-import mod.akkamaddi.classicalalchemy.init.ModTabGroups;
+import mod.akkamaddi.classicalalchemy.init.ModCreativeTabs;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -59,7 +59,7 @@ public class ModEventSubscriber
                 // Register the BlockItem for the block
                 .forEach(block -> {
                     // Make the properties, and make it so that the item will be on our ItemGroup (CreativeTab)
-                    final Item.Properties properties = new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP);
+                    final Item.Properties properties = new Item.Properties().tab(ModCreativeTabs.MOD_ITEM_GROUP);
                     // Create the new BlockItem with the block and it's properties
                     final BlockItem blockItem = new BlockItem(block, properties);
                     // Register the BlockItem
